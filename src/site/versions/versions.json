@@ -1,0 +1,5 @@
+{
+  "layout": "version",
+  "permalink": "/v/{{ language.iso6392B | slug }}/",
+  "tags": "versions"
+}

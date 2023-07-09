@@ -1,0 +1,30 @@
+<html>
+
+  <head>
+    {% block headerContent -%}
+      <title>{{ site.name }}
+        {% if title %} | {{ title }}
+        {% endif %}
+      </title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="{% if description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+      <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicons/favicon.png">
+    {%- endblock %}
+    {% block headerScripts -%}{%- endblock %}
+  </head>
+
+  <body>
+    {%- block topNav -%}{%- endblock %}
+    <div id="base-container">
+      <div id="main-col">
+        {% block mainColContent %}{% endblock %}
+      </div>
+      {% block extraneousContent %}{% endblock %}
+    </div>
+    {%- block footer -%}{%- endblock -%}
+    {% block footerScripts -%}{%- endblock %}
+  </body>
+
+</html>

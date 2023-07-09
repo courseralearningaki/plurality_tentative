@@ -1,0 +1,39 @@
+{%- from 'macros/nav.njk' import renderNav -%}
+{%- from 'macros/mobile-nav.njk' import renderMobileNav -%}
+{% extends "layouts/base.njk" %}
+
+{% block headerScripts %}{% endblock %}
+
+{% block topNav %}
+  {{ renderNav(
+  leftData = [
+    {
+      title: 'return',
+      path: "/",
+      return: true
+    }
+  ],
+  centreData = [],
+  rightData = []
+  ) }}
+  {{ renderMobileNav(
+    leftData = [
+    {
+      title: 'return',
+      path: "/",
+      return: true
+    }
+  ],
+  centreData = [],
+  rightData = []
+  ) }}
+{% endblock %}
+
+{% block mainColContent %}
+  {{ content | safe }}
+{% endblock %}
+
+{% block footerScripts -%}
+  <script src="{{ site.baseurl }}/assets/js/interactive-logo.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/light-dark-mode.js"></script>
+{%- endblock %}

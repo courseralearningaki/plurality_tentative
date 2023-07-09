@@ -1,0 +1,17 @@
+{% macro chapterVersionMenuItem(githubLink, dayStarted, yearStarted, monthStarted, language, contributeTranslated, pluralityTranslated,subtitleTranslated, pageTitle, pageUrl,chapterid_subid) %}
+
+    <span class="">
+      {% if language=='english' %}
+        <p><li style="font-size:200%">
+        <span>{{chapterid_subid}}&nbsp{{pageTitle}}</span></li>
+        <p>
+      {% endif %}
+
+      <span>{{subtitleTranslated}}  </span>
+      <span><a href="{{ pageUrl }}">{{ language }}</a></span>
+      {% if githubLink %}
+        <span>
+          <a href="{{ githubLink }}">&#8599;&#xFE0E;</a></span>
+      {% endif %}
+    </span>
+{% endmacro %}

@@ -1,0 +1,41 @@
+{%- from 'macros/nav.njk' import renderNav -%}
+{%- from 'macros/mobile-nav.njk' import renderMobileNav -%}
+{% extends "layouts/base.njk" %}
+
+{% block headerScripts %}{% endblock %}
+
+{% block topNav %}
+  {{ renderNav(
+  leftData = [
+    {
+      title: translations.return,
+      path: "/",
+      return: true
+    }
+  ],
+  centreData = [],
+  rightData = []
+  ) }}
+  {{ renderMobileNav(
+  leftData = [
+    {
+      title: translations.return,
+      path: "/",
+      return: true
+    }
+  ],
+  centreData = [],
+  rightData = []
+  ) }}
+{% endblock %}
+
+{% block mainColContent %}
+  {% include "partials/version-content.njk" %}
+{% endblock %}
+
+{% block extraneousContent %}{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block footerScripts %}
+  <script src="{{ site.baseurl }}/assets/js/light-dark-mode.js"></script>
+{% endblock %}

@@ -1,0 +1,74 @@
+@import './base.css';
+@import './home.css';
+@import './nav.css';
+@import './version.css';
+@import './about.css';
+
+@font-face {
+  font-family: 'authentic-sans';
+  src: url('../fonts/authentic-sans/AUTHENTICSans-90.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'authentic-sans';
+  src: url('../fonts/authentic-sans/AUTHENTICSans-150.woff2') format('woff2');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'lanapixel';
+  src: url('../fonts/lanapixel/LanaPixel.ttf') format('truetype');
+}
+
+
+/* ROOT VARIABLES, FOR USE IN MODULES WHERE APPROPRIATE */
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --font-size-step-0: 100%;
+  --font-size-step-1: 100%;
+  --font-size-step-2: 100%;
+  --font-size-step-3: 120%;
+  --font-size-step-4: 150%;
+  --font-size-step-5: 300%;
+  --padding-step-1: 5px;
+  --padding-step-2: 10px;
+  --padding-step-3: 25px;
+  --padding-step-4: 50px;
+  --padding-step-5: 100px;
+  --font-family: 'lanapixel', monospace;
+  --font-family-alt: 'authentic-sans', monospace;
+  --top-offset: 25vh;
+}
+
+
+/* UNIVERSAL STYLE DECLARATIONS */
+* {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+
+/* HIGHLIGHT SELECTED TEXT */
+::selection {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+
+/* MOBILE HANDLING */
+@media screen and (max-width: 768px) {
+  :root {
+    --padding-step-1: 0.3125rem;
+    --padding-step-2: 0.625rem;
+    --padding-step-3: 1.5625rem;
+    --padding-step-4: 3.125rem;
+    --padding-step-5: 6.25rem;
+  }
+}

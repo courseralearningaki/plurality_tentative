@@ -1,0 +1,258 @@
+/* ELEMENTS RENDERED USING LAYOUTS/VERSION */
+#version-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#version-wrapper > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+#version-wrapper > #version-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: calc(var(--top-offset)) calc(var(--padding-step-5)) 0 calc(var(--padding-step-5));
+}
+
+#version-wrapper > #version-content::-webkit-scrollbar {
+  display: none;
+}
+
+#version-wrapper > #version-index {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20%;
+  padding: calc(var(--top-offset)) calc(var(--padding-step-5)) 0 calc(var(--padding-step-5));
+}
+
+#version-wrapper > #version-content > #version-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--padding-step-3);
+}
+
+#version-wrapper > #version-content > #version-data > #version-data-title {
+  font-size: var(--font-size-step-5);
+  line-height: var(--font-size-step-5);
+  text-transform: uppercase;
+  margin-left: -2px;
+}
+
+#version-wrapper > #version-content > #version-data > span {
+  margin-top: var(--padding-step-2);
+}
+
+#version-wrapper > #version-content > #version-data > span > p {
+  font-size: var(--font-size-step-1);
+  line-height: var(--font-size-step-1);
+  font-style: italic;
+  font-family: var(--font-family-alt);
+}
+
+#version-wrapper > #version-index > #version-index-toggle-mobile {
+  font-size: var(--font-size-step-1);
+  line-height: var(--font-size-step-1);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: var(--padding-step-2);
+  margin-top: var(--padding-step-2);
+  display: none;
+}
+
+#version-wrapper > #version-index > #version-index-toggle-mobile > a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#version-wrapper > #version-index > #version-index-content-mobile {
+  display: none;
+}
+
+#version-wrapper > #version-index > #version-index-content {
+  display: block;
+}
+
+#version-wrapper > #version-index > #version-index-content > .toc > ol {
+  list-style-type: none;
+}
+
+#version-wrapper > #version-index > #version-index-content > .toc > ol > li {
+  padding: 0;
+  margin: 0;
+}
+
+#version-wrapper > #version-index > #version-index-content > .toc > ol > li > a {
+  text-transform: none;
+  text-decoration: none;
+  font-size: var(--font-size-step-1);
+  line-height: var(--font-size-step-1);
+}
+
+
+/* VERSIONS COLLECTION - MARKDOWN RENDERED CONTENT */
+#version-md {
+  padding-bottom: var(--padding-step-4);
+}
+
+#version-md > *, #version-md > * > * {
+  font-family: var(--font-family-alt);
+}
+
+#version-md > p {
+  margin-bottom: var(--padding-step-2);
+  font-size: var(--font-size-step-1);
+  line-height: calc(var(--font-size-step-1) * 1.3);
+}
+
+#version-md > h1, #version-md > h2, #version-md > h3 {
+  font-size: var(--font-size-step-3);
+  line-height: var(--font-size-step-3);
+  margin: 0 0 var(--padding-step-3) 0;
+  padding-top: var(--padding-step-3);
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+#version-md > h1:nth-child(n+2) {
+  font-size: var(--font-size-step-3);
+  line-height: var(--font-size-step-3);
+  padding-top: var(--padding-step-3);
+  margin: var(--padding-step-4) 0 var(--padding-step-3) 0 !important;
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+#version-md > #chapter-outline-structure {
+  list-style-type: upper-roman;
+  font-size: var(--font-size-step-1);
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
+#version-md > #chapter-outline-structure > * > *, #version-md > #chapter-outline-structure > * > * > * {
+  font-family: var(--font-family-alt);
+}
+
+#version-md > #chapter-outline-structure > li {
+  margin: var(--padding-step-3) 0 var(--padding-step-2) 0;
+}
+
+#version-md > #chapter-outline-structure > li > h1 {
+  font-size: var(--font-size-step-1);
+  line-height: var(--font-size-step-1);
+}
+
+#version-md > #chapter-outline-structure > li > p {
+  font-size: var(--font-size-step-1);
+  line-height: calc(var(--font-size-step-1) * 1.3);
+  margin: var(--padding-step-1) 0 var(--padding-step-1) 0;
+}
+
+#version-md > #chapter-outline-structure > li > ol {
+  list-style-position: outside;
+  margin-left: 1em;
+}
+
+#version-md > #chapter-outline-structure > li > ol > li {
+  font-size: var(--font-size-step-1);
+  line-height: calc(var(--font-size-step-1) * 1.3);
+  margin: var(--padding-step-2) 0 var(--padding-step-2) 0;
+}
+
+#version-md > .centre-text {
+  text-align: center;
+  margin: var(--padding-step-3) 0 0 0;
+}
+
+#version-md > .centre-text > p {
+  font-size: var(--font-size-step-1);
+  line-height: calc(var(--font-size-step-1) * 1.3);
+  margin: var(--padding-step-1) 0 var(--padding-step-1) 0;
+  font-style: italic;
+}
+
+
+/* MOBILE HANDLING */
+@media screen and (max-width: 768px) {
+  #version-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #version-wrapper > #version-content {
+    position: relative;
+    width: 100%;
+    padding: var(--padding-step-3);
+  }
+
+  #version-wrapper > #version-index {
+    position: relative;
+    width: 100%;
+    padding: var(--padding-step-3);
+  }
+
+  #version-wrapper > #version-index > #version-index-content {
+    display: none;
+  }
+
+  #version-wrapper > #version-index > #version-index-toggle-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: block;
+  }
+
+  #version-wrapper > #version-index > #version-index-content-mobile {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: 99;
+    display: none;
+  }
+
+  #version-wrapper > #version-index > #version-index-content-mobile > .toc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #version-wrapper > #version-index > #version-index-content-mobile > .toc > ol {
+    list-style-type: none;
+  }
+  
+  #version-wrapper > #version-index > #version-index-content-mobile > .toc > ol > li {
+    text-align: center;
+  }
+  
+  #version-wrapper > #version-index > #version-index-content-mobile > .toc > ol > li > a {
+    text-transform: none;
+    text-decoration: none;
+    font-size: var(--font-size-step-3);
+    line-height: var(--font-size-step-3);
+  }
+}
+
+
+
