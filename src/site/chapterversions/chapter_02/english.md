@@ -12,7 +12,7 @@ translations:
     chapters: 'chapters',
   }
 language: { en: 'english', iso6392B: 'en', locale: 'II Introduction' }
-chapterid: { chapterid: 2, chapterid_subid: '02-00'}
+chapterid: { chapterid: 2, chapterid_subid: '02'}
 translators: []
 ---
 {{github.return_url_02}}

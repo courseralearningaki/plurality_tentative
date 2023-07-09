@@ -12,7 +12,7 @@ translations:
     chapters: 'chapters',
   }
 language: { en: 'english', iso6392B: 'eng', locale: 'III Living in a Plural World' }
-chapterid: { chapterid: 3, chapterid_subid: '03-00'}
+chapterid: { chapterid: 3, chapterid_subid: '03-01'}
 translators: []
 ---
 {{github.return_url_03}}

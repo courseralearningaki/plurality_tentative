@@ -12,7 +12,7 @@ translations:
     chapters: 'chapters',
   }
 language: { en: 'chinese', iso6392B: 'zh-TW', locale: 'II The War Between Democracy and Technology' }
-chapterid: { chapterid: 2, chapterid_subid: '02-00'}
+chapterid: { chapterid: 2, chapterid_subid: '02'}
 translators: []
 ---
 {{github.return_url_02_zh_tw}}
