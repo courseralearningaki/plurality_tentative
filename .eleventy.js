@@ -68,8 +68,6 @@ module.exports = function(eleventyConfig) {
         if (('chapterid_subid' in obj[a].data.chapterid && 'chapterid_subid' in obj[b].data.chapterid) !== true) {
           return 0;
         }
-        // console.log(obj[a].data.language );
-        // console.log(obj[a].data.chapterid,obj[a].data.chapterid.chapterid_subid );
 
         if (obj[a].data.chapterid.chapterid_subid > obj[b].data.chapterid.chapterid_subid ) {
           return 1;
@@ -94,7 +92,6 @@ module.exports = function(eleventyConfig) {
         console.log(name.data.url);
       });
 
-    // console.log(sorted)
     return sorted;
 
 
@@ -109,7 +106,9 @@ module.exports = function(eleventyConfig) {
     "src/site/_data/fonts/authentic-sans/*" : "assets/fonts/authentic-sans",
     "src/site/_data/fonts/lanapixel/*" : "assets/fonts/lanapixel",
   });
+
   eleventyConfig.addWatchTarget("_update_interval");
+
   return {
     dir: {
       input: "src/site",
