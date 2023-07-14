@@ -20,4 +20,4 @@ translators:
     王嘉田Greg Wang
   ]
 ---
-{{github.return_url_02_zh_tw}}
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/第二章%20資訊技術與民主：日益擴大的鴻溝.md' %}

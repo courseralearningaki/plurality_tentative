@@ -14,10 +14,5 @@ translations:
 language: { en: 'english', iso6392B: 'en', locale: 'II Introduction' }
 chapterid: { chapterid: 2, chapterid_subid: '02'}
 translators: []
-eleventyComputed:
-  github_update: {{github}}
 ---
-
-({{github.return_url_02}})
-
-[//]: # ({% readdynamiccode 'https://raw.githubusercontent.com/courseralearningaki/plurality_tentative/main/refresh_test.md' %})
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/introduction.md' %}
