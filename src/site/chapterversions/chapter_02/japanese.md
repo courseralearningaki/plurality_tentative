@@ -11,8 +11,8 @@ translations:
     return: 'return',
     chapters: 'chapters',
   }
-language: { en: 'english', iso6392B: 'en', locale: 'II Introduction' }
+language: { en: 'japanese', iso6392B: 'jap', locale: 'II Introduction' }
 chapterid: { chapterid: 2, chapterid_subid: '02'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/introduction.md' %}
+{% readdynamiccode 'https://raw.githubusercontent.com/courseralearningaki/plurality_tentative/main/refresh_test.md' %}
