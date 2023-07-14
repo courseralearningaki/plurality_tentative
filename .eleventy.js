@@ -1,6 +1,5 @@
 const pluginTOC = require('eleventy-plugin-toc')
 const htmlmin = require("html-minifier");
-const EleventyFetch = require('@11ty/eleventy-fetch');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -14,15 +13,6 @@ module.exports = function(eleventyConfig) {
     tags: ['h1', 'h2', 'h3'],
     ul: true,
     wrapper: 'div'
-  });
-
-  eleventyConfig.addAsyncShortcode('readdynamiccode', async (url) => {
-      console.log(Date.now());
-      return EleventyFetch(url, {
-          duration: '1m',
-          type: 'text',
-          verbose: true
-      });
   });
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -109,7 +99,7 @@ module.exports = function(eleventyConfig) {
     "src/site/_data/fonts/authentic-sans/*" : "assets/fonts/authentic-sans",
     "src/site/_data/fonts/lanapixel/*" : "assets/fonts/lanapixel",
   });
-  eleventyConfig.addWatchTarget("_update_interval");
+
   return {
     dir: {
       input: "src/site",

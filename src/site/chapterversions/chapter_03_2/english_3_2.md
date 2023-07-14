@@ -15,4 +15,4 @@ language: { en: 'english', iso6392B: 'eng', locale: 'III The Lost Dao ' }
 chapterid: { chapterid: 3, chapterid_subid: '03-02'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/LostDao.md' %}
+{{github.return_url_03_02_en}}
