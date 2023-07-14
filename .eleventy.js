@@ -109,7 +109,7 @@ module.exports = function(eleventyConfig) {
     "src/site/_data/fonts/authentic-sans/*" : "assets/fonts/authentic-sans",
     "src/site/_data/fonts/lanapixel/*" : "assets/fonts/lanapixel",
   });
-
+  eleventyConfig.addWatchTarget("_update_interval");
   return {
     dir: {
       input: "src/site",
