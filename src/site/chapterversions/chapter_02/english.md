@@ -15,4 +15,4 @@ language: { en: 'english', iso6392B: 'en', locale: 'II Introduction' }
 chapterid: { chapterid: 2, chapterid_subid: '02'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/introduction.md' %}
+{{github.return_url_02}}
