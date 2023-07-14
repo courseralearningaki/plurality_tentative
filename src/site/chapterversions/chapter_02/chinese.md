@@ -6,13 +6,18 @@ translations:
   {
     plurality: 'Chapter II',
     subtitle: '民主與科技間的戰爭 ',
-    authorsLead: 'By Audrey Tang, E. Glen Weyl and the Plurality Community',
-    translatorsLead: 'Translated by:',
+    authorsLead: '作者: Audrey Tang, E. Glen Weyl and the Plurality Community',
+    translatorsLead: '譯者:',
     return: 'return',
-    chapters: 'chapters',
+    chapters: '章節',
   }
-language: { en: 'chinese', iso6392B: 'zh-TW', locale: 'II The War Between Democracy and Technology' }
+language: { en: 'Mandarin/華文', iso6392B: 'zh-TW', locale: 'II The War Between Democracy and Technology' }
 chapterid: { chapterid: 2, chapterid_subid: '02'}
-translators: []
+translators:
+  [
+    唐鳳Audrey Tang,
+    周宜蔓Gisele Chou,
+    王嘉田Greg Wang
+  ]
 ---
-{{github.return_url_02_zh_tw}}
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/第二章%20資訊技術與民主：日益擴大的鴻溝.md' %}
