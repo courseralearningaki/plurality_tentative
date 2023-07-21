@@ -13,7 +13,7 @@ const updateFile = (filename) => {
             console.log(`folder (${file_dir})  created`)
         } catch (err) {
             console.log(err.name + ':' +err.message)
-            console.log(`${file_dir} already exists`)
+            console.log(`creation of folder (${file_dir}) failed`)
         }
     }
 
@@ -21,10 +21,13 @@ const updateFile = (filename) => {
     const content = `${moment().format("YYYYMMDD hh:mm:ss")}`;
     try {
         fs.writeFileSync(fullName, content, "utf8" );
+        console.log(`file (${fullName}) created `);
         return content;
     } catch (err) {
+        console.log(`file (${fullName}) not created with error ${err.message}`);
         return "Error: " + err.message;
     }
+
 };
 
 exports.handler = async function(event, context) {
