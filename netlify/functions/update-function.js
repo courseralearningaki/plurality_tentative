@@ -18,7 +18,7 @@ const updateFile = (filename) => {
     const fullName = `${file_dir}/${filename}`;
     const content = `${moment().format("YYYYMMDD hh:mm:ss")}`;
     try {
-        fs.writeFileSync(fullName, content, { encoding: "utf8" });
+        fs.writeFileSync(fullName, content, "utf8");
         return content;
     } catch (err) {
         return "Error: " + err.message;
