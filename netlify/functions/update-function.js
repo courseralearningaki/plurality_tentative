@@ -10,7 +10,8 @@ const updateFile = (filename) => {
         console.log('create folder');
         try {
             fs.mkdirSync(dir=file_dir,{recursive:true});
-        } catch {
+        } catch(err) {
+            console.log(err.name + ':' +err.message)
             console.log(`${file_dir} already exists`)
         }
     }

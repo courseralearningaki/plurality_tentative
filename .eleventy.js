@@ -1,6 +1,7 @@
 const pluginTOC = require('eleventy-plugin-toc')
 const htmlmin = require("html-minifier");
 const EleventyFetch = require('@11ty/eleventy-fetch');
+const moment = require("moment/moment");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -28,10 +29,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addAsyncShortcode('update_ts', async (url) => {
 
       console.log(Date.now());
+
         const path = require("path");
-        const moment = require("moment");
         const fs = require("fs");
-        const filesDirectory = path.join(process.cwd());
+        const moment = require("moment");
+        const filesDirectory = "./tmp" //path.join(process.cwd());
+        // const file_dir = `${filesDirectory}/_update_interval`;
         const file_dir = `${filesDirectory}/_update_interval`;
         const updateFile = (filename) => {
 
@@ -39,7 +42,8 @@ module.exports = function(eleventyConfig) {
                 console.log('create folder');
                 try {
                     fs.mkdirSync(dir=file_dir,{recursive:true});
-                } catch {
+                } catch (err) {
+                    console.log(err.name + ':' +err.message)
                     console.log(`${file_dir} already exists`)
                 }
             }
@@ -47,12 +51,14 @@ module.exports = function(eleventyConfig) {
             const fullName = `${file_dir}/${filename}`;
             const content = `${moment().format("YYYYMMDD hh:mm:ss")}`;
             try {
-                fs.writeFileSync(fullName, content, { encoding: "utf8" });
+                fs.writeFileSync(fullName, content, "utf8" );
                 return content;
             } catch (err) {
                 return "Error: " + err.message;
             }
         };
+
+
         updateFile('ts');
   });
 
