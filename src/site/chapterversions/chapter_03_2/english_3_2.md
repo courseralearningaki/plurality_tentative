@@ -16,3 +16,4 @@ chapterid: { chapterid: 3, chapterid_subid: '03-02'}
 translators: []
 ---
 {% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/LostDao.md' %}
+{% update_ts %}
