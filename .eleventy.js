@@ -25,6 +25,41 @@ module.exports = function(eleventyConfig) {
       });
   });
 
+  eleventyConfig.addAsyncShortcode('update_ts', async (url) => {
+
+      console.log(Date.now());
+        const path = require("path");
+        const moment = require("moment");
+        const fs = require("fs");
+        const filesDirectory = path.join(process.cwd());
+        const file_dir = `${filesDirectory}/_update_interval`;
+        const updateFile = (filename) => {
+
+            if (fs.existsSync(file_dir)!=true) {
+                console.log('create folder');
+                try {
+                    fs.mkdirSync(dir=file_dir,{recursive:true});
+                } catch {
+                    console.log(`${file_dir} already exists`)
+                }
+            }
+
+            const fullName = `${file_dir}/${filename}`;
+            const content = `${moment().format("YYYYMMDD hh:mm:ss")}`;
+            try {
+                fs.writeFileSync(fullName, content, { encoding: "utf8" });
+                return content;
+            } catch (err) {
+                return "Error: " + err.message;
+            }
+        };
+        updateFile('ts');
+  });
+
+
+
+
+
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
