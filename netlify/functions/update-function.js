@@ -1,7 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
-const filesDirectory = path.join(process.cwd());
+const filesDirectory = "./netlify" //path.join(process.cwd());
+// const file_dir = `${filesDirectory}/_update_interval`;
 const file_dir = `${filesDirectory}/_update_interval`;
 const updateFile = (filename) => {
 
