@@ -35,7 +35,7 @@ module.exports = function(eleventyConfig) {
         const moment = require("moment");
         const filesDirectory = "src" //path.join(process.cwd());
         // const file_dir = `${filesDirectory}/_update_interval`;
-        const file_dir = `${filesDirectory}/_update_interval`;
+        const file_dir = `.`;
         const updateFile = (filename) => {
             console.log(`looking up folder - ${file_dir}`);
             if (fs.existsSync(file_dir)!=true) {
