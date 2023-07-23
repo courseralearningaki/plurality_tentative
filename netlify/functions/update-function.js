@@ -1,9 +1,9 @@
 const path = require("path");
 const fs = require("fs");
 const moment = require("moment");
-const filesDirectory = "src" //path.join(process.cwd());
-// const file_dir = `${filesDirectory}/_update_interval`;
-const file_dir = `.`;
+const filesDirectory = "./tmp" //path.join(process.cwd());
+const file_dir = `${filesDirectory}/_update_interval`;
+// const file_dir = `.`;
 const updateFile = (filename) => {
 
     console.log(`looking up folder - ${file_dir}`);
