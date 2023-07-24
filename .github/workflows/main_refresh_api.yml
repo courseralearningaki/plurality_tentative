@@ -1,5 +1,5 @@
 name: api_call
-on: [push]
+on: workflow_call
 jobs:
   my_job:
     runs-on: ubuntu-18.04
