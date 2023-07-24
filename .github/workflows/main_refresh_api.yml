@@ -1,0 +1,8 @@
+name: api_call
+on: [push]
+jobs:
+  my_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: refresh_api_call
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/64be955976ceca08d0d613df
