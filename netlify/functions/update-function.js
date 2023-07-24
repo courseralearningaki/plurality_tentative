@@ -33,6 +33,7 @@ const updateFile = (filename) => {
 
 exports.handler = async function(event, context) {
     console.log("Received event:", event);
+    console.log("context:", context)
     const update_result = updateFile('ts')
     console.log("Received event (file created)", update_result);
 
