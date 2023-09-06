@@ -66,18 +66,25 @@ module.exports = function(eleventyConfig) {
 
 
 
-
-
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  eleventyConfig.addTransform("any", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
+      let minified = content;
+      console.log("any transform:"+outputPath);
+      minified = _replaceContentTokens( outputPath, minified);
       return minified;
     }
   });
+
+  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  //   if( outputPath.endsWith(".html") ) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true
+  //     });
+  //     return minified;
+  //   }
+  // });
 
   eleventyConfig.addFilter("sortDataByLanguageIso", (obj) => {
     const sorted = [];
@@ -162,3 +169,34 @@ module.exports = function(eleventyConfig) {
     }
   }
 }
+
+function _replaceContentTokens(outputPath, content) {
+    console.log("Plurality replacement")
+
+    if (outputPath == "dist/v/eng/index.html"){
+        let copy_of_content = content;
+        const regex = /<!--\s*tooltip\s+{([^{}]*)}+{([^{}]*)}\s*-->/g;
+        const newText = copy_of_content.replace(regex, (match, base_text,tooltip_text) => {
+        const return_text = `<u><span class="tooltip" data-tooltip="(tooltip)${tooltip_text}">` +
+            `${base_text}</span></u>`
+        return return_text;
+        });
+        content = newText;
+    }
+  return content;
+}
+  // content = content.replaceAll('Plurality','<!-- tooltip {Plurality Base}{Plurality Tooltip} -->');
+  //         content = content.replaceAll('Plurality',
+  //             '<span class="tooltip" id="plurality-label" data-tooltip="tooltip text.\n' +
+  //             'Plurality is technology that recognized, honors, and empower the collaboration." >Plurality (tooltip)</span>'
+  //         );
+  // content = content.replace('<div id="version-md">',
+  //     '<span aria-describedby="plurality-label" style="display:inline-block;">Plurality(tooltip)</span>' +
+  //     '<div id="version-md">' +
+  //     '<div role="tooltip" id="plurality-label">Plurality text long, long,long, long,long, long,long, long</div>'
+  //     );
+  //     '<details style="list-style:none;display:inline-block"><summary style="list-style:none;display:list-item">Plurality</summary>summary</details>' +
+  //     '<div style="display:inline-block" title="Plurality text long, long,long, long,long, long,long, long,">Plurality(div)</div>' +
+  //       `<script>document.write("P-l-u-r-ality");
+  //        </script>`
+  // content += '<div role="tooltip" id="plurality-label">Plurality text long, long,long, long,long, long,long, long</div>'
