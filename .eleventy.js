@@ -17,13 +17,26 @@ module.exports = function(eleventyConfig) {
     wrapper: 'div'
   });
 
-  eleventyConfig.addAsyncShortcode('readdynamiccode', async (url) => {
+  eleventyConfig.addAsyncShortcode('readdynamiccode',  async (url) => {
       console.log(Date.now());
-      return EleventyFetch(url, {
-          duration: '1m',
-          type: 'text',
-          verbose: true
+      try {
+          let returnedContent = EleventyFetch(url, {
+              duration: '1m',
+              type: 'text',
+              verbose: true
+          }).then(
+               function(response){
+                return response;
+            }
+              ).catch(error => {
+                  console.log(`The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`);
+                  return "Please visit this page again later. The page is currently unavailable but the work for this page is under work in process and will become available in due time.";
       });
+          return returnedContent;
+      } catch (e) {
+          console.log(`The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`);
+          return "Please visit this page again later. The page is currently unavailable but the work for this page is under work in process and will become available in due time.";
+      }
   });
 
   eleventyConfig.addAsyncShortcode('update_ts', async (url) => {
@@ -69,7 +82,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTransform("any", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
       let minified = content;
-      console.log("any transform:"+outputPath);
       minified = _replaceContentTokens( outputPath, minified);
       return minified;
     }
@@ -171,15 +183,15 @@ module.exports = function(eleventyConfig) {
 }
 
 function _replaceContentTokens(outputPath, content) {
-    console.log("Plurality replacement")
 
     if (outputPath == "dist/v/eng/index.html"){
         let copy_of_content = content;
         const regex = /<!--\s*tooltip\s+{([^{}]*)}+{([^{}]*)}\s*-->/g;
         const newText = copy_of_content.replace(regex, (match, base_text,tooltip_text) => {
-        const return_text = `<u><span class="tooltip" data-tooltip="(tooltip)${tooltip_text}">` +
-            `${base_text}</span></u>`
-        return return_text;
+            const return_text = `<u><span class="tooltip" data-tooltip="(tooltip)${tooltip_text}">` +
+                `${base_text}</span></u>`
+            console.log(`Replaced "${base_text}" with "${tooltip_text}"`)
+            return return_text;
         });
         content = newText;
     }
