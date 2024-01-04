@@ -3,59 +3,24 @@ layout: home
 permalink: "/"
 ---
 
-{%- from './_includes/macros/version-menu-item.njk' import versionMenuItem -%}
-{%- from './_includes/macros/chapterversion-menu-item.njk' import chapterVersionMenuItem -%}
+<div style="colspan:2">
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
+PLURALITY
+</div>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/01-preface.md' %}
+</div>
+{%- for toppage in collections.toppages -%}
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
+{{ toppage.data.title }}<br>
+{{ toppage.content | safe }}
+</div>
+{%- endfor -%}
 
-<table>
-<tr><td>
-<div id="version-menu">
-  <ol id="version-ol">
-  <div>
-      <li style="font-size:250%">
-      Announcement
-      </li>
-      </div>
-    {% for version in collections.versions | sortDataByLanguageIso %}
-      <li class="version-item">
-        {{ versionMenuItem(
-          githubLink = version.data.githubLink, 
-          dayStarted = version.data.dateStartedString.day,
-          monthStarted = version.data.dateStartedString.month,
-          yearStarted = version.data.dateStartedString.year,
-          language = version.data.language.locale,
-          contributeTranslated = version.data.translations.contribute,
-          pluralityTranslated = version.data.translations.plurality,
-          pageTitle = version.data.title,
-          pageUrl = version.url) 
-        }}
-      </li>
-    {% endfor %}
-  </ol>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
+<img src='https://raw.githubusercontent.com/akinorioyama/plurality.net/main/src/site/_includes/favicons/logo.png'>
 </div>
-</td>
-<td>
-<div id="version-menu">
-  <ol id="version-ol">
-      <li style="font-size:250%">
-      Chapters
-      </li>
-    {% for version in collections.chapterversions |sortDataByChapteridSubidLanguageIso %}
-        {{ chapterVersionMenuItem(
-          githubLink = version.data.githubLink,
-          dayStarted = version.data.dateStartedString.day,
-          monthStarted = version.data.dateStartedString.month,
-          yearStarted = version.data.dateStartedString.year,
-          language = version.data.language.en,
-          contributeTranslated = version.data.translations.contribute,
-          pluralityTranslated = version.data.translations.plurality,
-          subtitleTranslated = version.data.translations.subtitle,
-          pageTitle = version.data.title,
-          pageUrl = version.url,
-          chapterid_subid = version.data.chapterid.chapterid_subid)
-        }}
-    {% endfor %}
-  </ol>
+
+
 </div>
-</td>
-</tr>
-</table>
+

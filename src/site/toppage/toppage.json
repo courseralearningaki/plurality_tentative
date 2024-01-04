@@ -1,0 +1,5 @@
+{
+  "layout": "home",
+  "permalink": "/top/{{ language.iso6392B | slug }}/{{ chapterid.chapterid_subid}}",
+  "tags": "toppages"
+}
