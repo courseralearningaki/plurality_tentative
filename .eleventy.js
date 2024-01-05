@@ -1,7 +1,6 @@
 const pluginTOC = require('eleventy-plugin-toc')
 const htmlmin = require("html-minifier");
 const EleventyFetch = require('@11ty/eleventy-fetch');
-const moment = require("moment/moment");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -17,86 +16,65 @@ module.exports = function(eleventyConfig) {
     wrapper: 'div'
   });
 
-  eleventyConfig.addAsyncShortcode('readdynamiccode',  async (url) => {
-      console.log(Date.now());
+  eleventyConfig.addAsyncShortcode('readdynamiccode', async (url,fallback_url) => {
+    const log_text = `The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`
+    const log_text_shown_from_fallback = `The resource of fallback location at "${fallback_url} will be used if available."`
+    const screen_text =  "Please revisit this page later. The page is currently unavailable but will become available soon."
+    const shortcodeFetch = (url,fallback_url) => {
       try {
-          let returnedContent = EleventyFetch(url, {
-              duration: '1m',
-              type: 'text',
-              verbose: true
-          }).then(
-               function(response){
-                return response;
-            }
-              ).catch(error => {
-                  console.log(`The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`);
-                  return "Please visit this page again later. The page is currently unavailable but the work for this page is under work in process and will become available in due time.";
-      });
-          return returnedContent;
+        let returnedContent = EleventyFetch(url, {
+          duration: '1m',
+          type: 'text',
+          verbose: true
+        }).then(
+         function(response){
+           return response;
+         }
+        ).catch(error => {
+          console.log(log_text);
+          if (fallback_url != null ){
+            console.log(log_text_shown_from_fallback)
+            return shortcodeFetch(fallback_url,null);
+          } else {
+            return screen_text;
+          }
+        });
+        return returnedContent;
       } catch (e) {
-          console.log(`The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`);
-          return "Please visit this page again later. The page is currently unavailable but the work for this page is under work in process and will become available in due time.";
+        console.log(log_text);
+        return screen_text;
       }
+    }
+    return shortcodeFetch(url,fallback_url);
   });
 
-  eleventyConfig.addAsyncShortcode('update_ts', async (url) => {
-
-      console.log(Date.now());
-
-        const path = require("path");
-        const fs = require("fs");
-        const moment = require("moment");
-        const filesDirectory = "./src" //path.join(process.cwd());
-        const file_dir = `${filesDirectory}/site/_update_interval`;
-        const updateFile = (filename) => {
-            console.log(`looking up folder - ${file_dir}`);
-            if (fs.existsSync(file_dir)!=true) {
-                console.log(`create folder - ${file_dir}`);
-                try {
-                    fs.mkdirSync(file_dir,{recursive:true});
-                    console.log(`folder (${file_dir})  created`)
-                } catch (err) {
-                    console.log(err.name + ':' +err.message)
-                    console.log(`creation of folder (${file_dir}) failed`)
-                }
-            }
-
-            const fullName = `${file_dir}/${filename}`;
-            const content = `${moment().format("YYYYMMDD hh:mm:ss")}`;
-            try {
-                fs.writeFileSync(fullName, content, "utf8" );
-                console.log(`file (${fullName}) created `);
-                return content;
-            } catch (err) {
-                console.log(`file (${fullName}) not created with error ${err.message}`);
-                return "Error: " + err.message;
-            }
-        };
-
-
-        updateFile('ts');
-  });
-
-
-
-  eleventyConfig.addTransform("any", function(content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
-      let minified = content;
-      minified = _replaceContentTokens( outputPath, minified);
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
       return minified;
     }
   });
 
-  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-  //   if( outputPath.endsWith(".html") ) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true
-  //     });
-  //     return minified;
-  //   }
-  // });
+  eleventyConfig.addFilter("sortByPageOrder", (obj) => {
+    const sorted = [];
+    Object.keys(obj)
+      .sort((a, b) => {
+        if (('pageOrder' in obj[a].data && 'pageOrder' in obj[b].data) !== true){
+          return -1;
+        } else {
+          return obj[a].data.pageOrder > obj[b].data.pageOrder ? 1 : -1;
+        }
+      })
+      .forEach((name, index) => {
+        sorted[index] = obj[name]
+      });
+    return sorted;
+  });
+
 
   eleventyConfig.addFilter("sortDataByLanguageIso", (obj) => {
     const sorted = [];
@@ -156,10 +134,7 @@ module.exports = function(eleventyConfig) {
 
     return sorted;
 
-
   });
-
-
 
   eleventyConfig.addPassthroughCopy({
     "src/site/_includes/css/*.css" : "assets/css",
@@ -181,34 +156,3 @@ module.exports = function(eleventyConfig) {
     }
   }
 }
-
-function _replaceContentTokens(outputPath, content) {
-
-    if (outputPath == "dist/v/eng/index.html"){
-        let copy_of_content = content;
-        const regex = /<!--\s*tooltip\s+{([^{}]*)}+{([^{}]*)}\s*-->/g;
-        const newText = copy_of_content.replace(regex, (match, base_text,tooltip_text) => {
-            const return_text = `<u><span class="tooltip" data-tooltip="(tooltip)${tooltip_text}">` +
-                `${base_text}</span></u>`
-            console.log(`Replaced "${base_text}" with "${tooltip_text}"`)
-            return return_text;
-        });
-        content = newText;
-    }
-  return content;
-}
-  // content = content.replaceAll('Plurality','<!-- tooltip {Plurality Base}{Plurality Tooltip} -->');
-  //         content = content.replaceAll('Plurality',
-  //             '<span class="tooltip" id="plurality-label" data-tooltip="tooltip text.\n' +
-  //             'Plurality is technology that recognized, honors, and empower the collaboration." >Plurality (tooltip)</span>'
-  //         );
-  // content = content.replace('<div id="version-md">',
-  //     '<span aria-describedby="plurality-label" style="display:inline-block;">Plurality(tooltip)</span>' +
-  //     '<div id="version-md">' +
-  //     '<div role="tooltip" id="plurality-label">Plurality text long, long,long, long,long, long,long, long</div>'
-  //     );
-  //     '<details style="list-style:none;display:inline-block"><summary style="list-style:none;display:list-item">Plurality</summary>summary</details>' +
-  //     '<div style="display:inline-block" title="Plurality text long, long,long, long,long, long,long, long,">Plurality(div)</div>' +
-  //       `<script>document.write("P-l-u-r-ality");
-  //        </script>`
-  // content += '<div role="tooltip" id="plurality-label">Plurality text long, long,long, long,long, long,long, long</div>'

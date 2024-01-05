@@ -4,7 +4,7 @@ permalink: "/"
 ---
 
 <div>
-{%- for toppage in collections.toppages -%}
+{%- for toppage in collections.toppages | sortByPageOrder -%}
 <div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
 Page: {{ toppage.data.title }}  <br>
 {{ toppage.content | safe }}
