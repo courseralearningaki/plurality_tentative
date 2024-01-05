@@ -16,6 +16,11 @@ chapterid: { chapterid: top, chapterid_subid: 'joinus'}
 translators: []
 layout: home
 ---
-How does this project work
+<center>
 
-Plurality is a perpetually evolving work that sources content using gov4git, a novel open-source governance technology. This project does not exist without its community and welcomes your input. To learn more, check out gov4git and the Plurality github repository.
+# How does this project work
+
+## Plurality is a perpetually evolving work that sources content using gov4git, a novel open-source governance technology. This project does not exist without its community and welcomes your input. To learn more, check out gov4git and the Plurality github repository.
+</center>
+
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/07-01-conclusion.md' %}

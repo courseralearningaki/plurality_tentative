@@ -3,24 +3,35 @@ layout: home
 permalink: "/"
 ---
 
-<div style="colspan:2">
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
-PLURALITY
-</div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/01-preface.md' %}
-</div>
+<div>
 {%- for toppage in collections.toppages -%}
 <div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-{{ toppage.data.title }}<br>
+Page: {{ toppage.data.title }}  <br>
 {{ toppage.content | safe }}
 </div>
 {%- endfor -%}
+</div>
 
 <div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
 <img src='https://raw.githubusercontent.com/akinorioyama/plurality.net/main/src/site/_includes/favicons/logo.png'>
 </div>
 
 
+
+
+<div>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
+<center>
+<h1><span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#00bfff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
+</h1>
+    </center>
+
+</div>
+
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
+
+    {% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/01-preface.md' %}
+
+</div>
 </div>
 
