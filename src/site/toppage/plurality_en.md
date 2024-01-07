@@ -10,8 +10,9 @@ pageOrder: 1
 ---
 
 <style type="text/css">
-.btn {
+.btnlocal {
   background-color: #FFFFFF;
+  margin: 0 0 0 0;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -21,10 +22,11 @@ pageOrder: 1
   font-size: 16px;
   border-radius: 8px;
 }
-ab {
+a {
     display: block;
-    height: 20px;
+    height: auto;
     width: auto;
+    margin: 0 0 0 0;
     border: 1px solid #000;
 }
 </style>
@@ -37,5 +39,5 @@ ab {
 COLLABORATIVE TECHNOLOGY<br>
 AND DEMOCRACY</H2>
 <br>
-<a href="./chapters" class="btn">Read the Chapters<a>
+<a href="./chapters" class="btnlocal">Read the Chapters</a>
 </center>

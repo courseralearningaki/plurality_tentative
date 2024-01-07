@@ -4,7 +4,9 @@
     {% if leftData %}
       <div id="nav-left">
         {% for item in leftData %}
-          {% if item.external %}
+          {% if item.icon %}
+            <a href="{{ item.path }}"><img src="{{ item.imgpath }}" height="35" width="212"></a>
+          {% elif item.external %}
             <a target="_blank" href="{{ item.path }}" class="top-nav-item">{{ item.title }} &#8599;&#xFE0E;</a>
           {% elif item.return %}
             <a href="{{ item.path }}" class="top-nav-item">{{ item.title }} &#x2715;&#xFE0E;</a>

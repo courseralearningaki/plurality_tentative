@@ -21,7 +21,7 @@ pageOrder: 4
 .btn {
   background-color: #FFFFFF;
   border: none;
-  margin: 0 64px 0 0;  
+  margin: 0 0 0 0;  
   color: black;
   padding: 12px 30px;
   text-align: center;
@@ -44,7 +44,7 @@ pageOrder: 4
 <br>
 <br>
 <br>
-<a href="https://github.com/gov4git/gov4git" class="btn">gov4git<a>
-<a href="https://github.com/pluralitybook/plurality" class="btn">Plurality GitHub Repository<a>
+<a href="https://github.com/gov4git/gov4git" style="margin: 0 32px 0 32px" class="btn">gov4git</a>
+<a href="https://github.com/pluralitybook/plurality" class="btn">Plurality GitHub Repository</a>
 
 </center>

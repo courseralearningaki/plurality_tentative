@@ -52,7 +52,7 @@
   color: var(--secondary-color);
   text-decoration: none;
   font-size: var(--font-size-step-1);
-  text-transform: uppercase;
+  text-transform: inherit;
 }
 
 #nav > * > a, #mobile-nav > * > a, #mobile-nav-overlay-wrapper > #mobile-nav-overlay > div > a {
@@ -107,7 +107,7 @@
   color: var(--secondary-color);
   text-decoration: none;
   font-size: var(--font-size-step-1);
-  text-transform: uppercase;
+  text-transform: inherit;
 }
 
 #mobile-nav-overlay-wrapper {
@@ -157,5 +157,15 @@
   #mobile-nav {
     display: flex;
   }
+}
+
+
+.chapter span {
+  font-family: var(--font-family-alt);
+}
+
+.chapter li.title span {
+  font-size: 200%;
+  font-family: var(--font-family);
 }
 
