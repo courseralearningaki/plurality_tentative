@@ -15,7 +15,7 @@ language: { en: 'english', iso6392B: 'eng', locale: 'english' }
 chapterid: { chapterid: top, chapterid_subid: 'joinus'}
 translators: []
 layout: home
-pageOrder: 4
+pageOrder: 5
 ---
 <style type="text/css">
 .btn {

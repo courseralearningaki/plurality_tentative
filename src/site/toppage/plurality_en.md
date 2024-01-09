@@ -29,6 +29,12 @@ a {
     margin: 0 0 0 0;
     border: 1px solid #000;
 }
+span {
+    font-size:64px;
+}
+h2 {
+    font-size:24px;
+}
 </style>
 <center>
 <h1>

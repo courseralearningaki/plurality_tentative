@@ -15,10 +15,10 @@ language: { en: 'english', iso6392B: 'eng', locale: 'english' }
 chapterid: { chapterid: graphic, chapterid_subid: 'graphicicon'}
 translators: []
 layout: home
-pageOrder: 5
+pageOrder: 4
 ---
 <center>
 
 # Icon Graphic
-<img src='https://raw.githubusercontent.com/akinorioyama/plurality.net/main/src/site/_includes/favicons/logo.png'>
+<img width="291px" height="291px" src='../assets/favicons/toppage_plurality_icon.png'>
 </center>

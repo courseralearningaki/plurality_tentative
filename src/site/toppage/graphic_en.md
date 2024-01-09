@@ -20,5 +20,5 @@ pageOrder: 2
 <center>
 
 # Book Graphic
-<img src='https://raw.githubusercontent.com/akinorioyama/plurality.net/main/src/site/_includes/favicons/logo.png'>
+<img width="566px" height="751px" src='../assets/favicons/bookcover.png'>
 </center>

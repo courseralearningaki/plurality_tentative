@@ -3,35 +3,34 @@ layout: home
 permalink: "/"
 ---
 
-<div>
+{{ collections.toppages[0].content | safe }}
+{{ collections.toppages[1].content | safe }}
+{{ collections.toppages[2].content | safe }}
+    <div>
 {%- for toppage in collections.toppages | sortByPageOrder -%}
 <div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
 Page: {{ toppage.data.title }}  <br>
 {{ toppage.content | safe }}
 </div>
 {%- endfor -%}
+    </div>
+
+    <div>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
+{% include "./toppage/plurality_en.md" %}
 </div>
-
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
-<img src='https://raw.githubusercontent.com/akinorioyama/plurality.net/main/src/site/_includes/favicons/logo.png'>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
+{% include "./toppage/graphic_en.md" %}
 </div>
-
-
-
-
-<div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
-<center>
-<h1><span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#00bfff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
-</h1>
-    </center>
-
+    </div>
+    <div>
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
+{% include "./toppage/overview_en.md" %}
 </div>
-
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:inline-flex;float:left;min-width:500px;">
-
-    {% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/01-preface.md' %}
-
+<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
+{% include "./toppage/graphic_icon_en.md" %}
 </div>
+    </div>
+<div style="margin:5% 5% 5% 5%;height:600px; width:100%;display:grid;float:left;min-width:500px;">
+{% include "./toppage/joinus_en.md" %}
 </div>
-
