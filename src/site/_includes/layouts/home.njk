@@ -84,10 +84,10 @@
 
 {% block mainColContent %}
   {{ content | safe }}
+  {% include "partials/footer.njk" %}
 {% endblock %}
 
 {% block extraneousContent %}
-  <div id="interactive-type"></div>
 {% endblock %}
 
 {% block footer %}{% endblock %}
