@@ -6,11 +6,11 @@
 <div style="color:#26b72b; background:rgba(255,255,255,0.20) ; border-radius: 32px; padding:28px;gap:24px;margin:16px 16px">
         <span style="display:inline-block;width:128px; font-size:36px;">{{chapterid_subid}}</span>
         <span style="display:inline-block;width:60%; font-size:36px;">{{pageTitle}}</span>
-        <span><a href="{{ pageUrl }}">{{ language }}</a></span>
+        <span><a href="{{ pageUrl }}" class="button_small">{{ language }}</a></span>
       {% else %}
         <span style="display:inline-block;width:128px; font-size:36px;"></span>
         <span style="display:inline-block;width:60%;font-size:24px;">{{subtitleTranslated}}</span>
-        <span><a href="{{ pageUrl }}">{{ language }}</a></span>
+        <span><a href="{{ pageUrl }}" class="button_small">{{ language }}</a></span>
       {% endif %}
       {% if githubLink %}
         <span><a href="{{ githubLink }}">&#8599;&#xFE0E;</a></span>
