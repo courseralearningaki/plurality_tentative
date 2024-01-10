@@ -4,6 +4,12 @@
   flex-direction: row;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;;
+  scroll-behavior: auto;
+}
+
+#version-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 #version-wrapper > div {
@@ -13,7 +19,7 @@
 }
 
 #version-wrapper > #version-content {
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   right: 0;
   width: 80%;
@@ -27,7 +33,7 @@
 }
 
 #version-wrapper > #version-index {
-  position: fixed;
+  /*position: fixed;*/
   left: 0;
   top: 0;
   width: 20%;
@@ -42,7 +48,7 @@
 
 #version-wrapper > #version-content > #version-data > #version-data-title {
   font-size: var(--font-size-step-5);
-  line-height: var(--font-size-step-5);
+  line-height: var(--font-size-step-1);
   text-transform: uppercase;
   margin-left: -2px;
 }
@@ -107,8 +113,19 @@
   padding-bottom: var(--padding-step-4);
 }
 
-#version-md > *, #version-md > * > * {
+#version-md > *, #version-md > * > *,
+#version-md > * > * > *, #version-md > * > * > * > * {
   font-family: var(--font-family-alt);
+}
+
+#version-md blockquote {
+  border-left: 8px solid #ccc;
+  margin: 1.5em 0px;
+  padding: 0.5em 10px;
+}
+
+#version-md strong {
+  font-weight: bold;
 }
 
 #version-md > p {
@@ -117,7 +134,8 @@
   line-height: calc(var(--font-size-step-1) * 1.3);
 }
 
-#version-md > h1, #version-md > h2, #version-md > h3 {
+#version-md > h1, #version-md > h2, #version-md > h3,
+#version-md > h4, #version-md > h5, #version-md > h6 {
   font-size: var(--font-size-step-3);
   line-height: var(--font-size-step-3);
   margin: 0 0 var(--padding-step-3) 0;
@@ -182,6 +200,14 @@
   line-height: calc(var(--font-size-step-1) * 1.3);
   margin: var(--padding-step-1) 0 var(--padding-step-1) 0;
   font-style: italic;
+}
+
+#version-md ol, #version-md ul {
+  margin: 0 0 var(--padding-step-2) 0;
+}
+
+#version-md ol li, #version-md ul li {
+  margin: 0 0 var(--padding-step-1) 0;
 }
 
 

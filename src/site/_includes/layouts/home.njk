@@ -65,8 +65,8 @@
       },
       {
         title: 'Announcement',
-        path: 'https://www.radicalxchange.org/media/blog/plurality-technology-for-collaborative-diversity-and-democracy/',
-        external: true
+        path: '../announcement/',
+        external: false
       },
     {
       title: 'Chapters',
@@ -84,7 +84,6 @@
 
 {% block mainColContent %}
   {{ content | safe }}
-  {% include "partials/footer.njk" %}
 {% endblock %}
 
 {% block extraneousContent %}

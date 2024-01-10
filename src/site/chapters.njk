@@ -10,15 +10,13 @@ permalink: "/chapters/"
 <td valign="top">
 <div id="version-menu">
   <ol id="version-ol">
-      <li style="font-size:250%">
-      Chapters
-      </li>
 <div>
     {% for version in collections.chapterversions |sortDataByChapteridSubidLanguageIso %}
 {% if ((version.data.language.en) == 'english')%}
 </div>
 {% if ((version.data.chapterid.chapterid_subid) == '01') %}
-    <div style="border:solid 10px #a9a9a9; border-radius: 8px; padding:10px; margin: 0 0 5% 0;">
+          <li style="font-size:250%">Chapter {{ version.data.chapterid.chapterid }}</li>
+    <div>
         {% endif %}
 
 {% if ((version.data.chapterid.chapterid_subid) == '03-00')
@@ -29,7 +27,8 @@ permalink: "/chapters/"
     or ((version.data.chapterid.chapterid_subid) == '07-01' )
     %}
 </div>
-    <div style="border:solid 10px #a9a9a9; border-radius: 8px; padding:10px; margin: 0 0 5% 0;">
+          <li style="font-size:250%">Chapter {{ version.data.chapterid.chapterid }}</li>
+    <div>
         {% endif %}
         {% endif %}
 
@@ -47,9 +46,8 @@ permalink: "/chapters/"
           chapterid_subid = version.data.chapterid.chapterid_subid)
         }}
     {% endfor %}
-</table>
-  </ol>
 </div>
 </td>
 </tr>
 </table>
+{% include "partials/footer.njk" %}

@@ -3,34 +3,8 @@ layout: home
 permalink: "/"
 ---
 
-{{ collections.toppages[0].content | safe }}
-{{ collections.toppages[1].content | safe }}
-{{ collections.toppages[2].content | safe }}
-    <div>
 {%- for toppage in collections.toppages | sortByPageOrder -%}
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-Page: {{ toppage.data.title }}  <br>
 {{ toppage.content | safe }}
-</div>
 {%- endfor -%}
-    </div>
 
-    <div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-{% include "./toppage/plurality_en.md" %}
-</div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-{% include "./toppage/graphic_en.md" %}
-</div>
-    </div>
-    <div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-{% include "./toppage/overview_en.md" %}
-</div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:600px;display:grid;float:left;min-width:500px;">
-{% include "./toppage/graphic_icon_en.md" %}
-</div>
-    </div>
-<div style="margin:5% 5% 5% 5%;height:600px; width:100%;display:grid;float:left;min-width:500px;">
-{% include "./toppage/joinus_en.md" %}
-</div>
+{% include "partials/footer.njk" %}

@@ -1,18 +1,19 @@
 {% macro chapterVersionMenuItem(githubLink, dayStarted, yearStarted, monthStarted, language, contributeTranslated, pluralityTranslated,subtitleTranslated, pageTitle, pageUrl,chapterid_subid) %}
 
     <!-- <span class="chapter">-->
+<p>
       {% if language=='english' %}
-<div style="color:#26b72b;border:solid 2px #a9a9a9; border-radius: 8px; padding:10px;">
-        <p><li class="title">
-        <span>{{chapterid_subid}}&nbsp{{pageTitle}}</span></li>
-        <p>
+<div style="color:#26b72b; background:rgba(255,255,255,0.20) ; border-radius: 32px; padding:28px;gap:24px;margin:16px 16px">
+        <span style="display:inline-block;width:128px; font-size:36px;">{{chapterid_subid}}</span>
+        <span style="display:inline-block;width:60%; font-size:36px;">{{pageTitle}}</span>
+        <span><a href="{{ pageUrl }}">{{ language }}</a></span>
+      {% else %}
+        <span style="display:inline-block;width:128px; font-size:36px;"></span>
+        <span style="display:inline-block;width:60%;font-size:24px;">{{subtitleTranslated}}</span>
+        <span><a href="{{ pageUrl }}">{{ language }}</a></span>
       {% endif %}
-
-      <span>{{subtitleTranslated}}  </span>
-      <span><a href="{{ pageUrl }}">{{ language }}</a></span>
       {% if githubLink %}
-        <span>
-          <a href="{{ githubLink }}">&#8599;&#xFE0E;</a></span>
+        <span><a href="{{ githubLink }}">&#8599;&#xFE0E;</a></span>
       {% endif %}
 <!-- </span> -->
 
