@@ -78,6 +78,25 @@
   display: inline-block;
 }
 
+#footer-container > * > a {
+    display: block;
+    height: auto;
+    width: auto;
+    margin: 0 0 0 0;
+}
+
+.button_small {
+  background-color: #FFFFFF;
+  margin: 0 0 0 0;
+  border: none;
+  color: black;
+  padding: 0px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+}
 
 /* INTERACTIVE TYPE DIV */
 #interactive-type {

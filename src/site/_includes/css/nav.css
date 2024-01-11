@@ -169,3 +169,6 @@
   font-family: var(--font-family);
 }
 
+#nav-right {
+  gap: 36px;
+}
