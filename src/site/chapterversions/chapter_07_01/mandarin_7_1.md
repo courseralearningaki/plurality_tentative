@@ -4,7 +4,7 @@ githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/tradi
 dateStartedString: { day: '07', month: '01', year: '2024' }
 translations:
   {
-    plurality: 'Chapter VII 0',
+    plurality: 'Chapter VII 1',
     subtitle: '結語',
     authorsLead: '',
     translatorsLead: '譯者:',
