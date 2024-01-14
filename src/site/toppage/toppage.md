@@ -37,7 +37,7 @@ pageOrder: 1
     </div>
 </div>
 <div style="width: 100%; height: 100%; justify-content: center; align-items: center; gap: 26px; display: inline-flex">
-<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 101px; padding-top: 50px; padding-bottom: 50px; background: black; justify-content: center; align-items: center; gap: 191px; display: inline-flex">
+<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 101px; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 191px; display: inline-flex">
     <div style="position:relative;left:-50px;gap: 220px; flex: 1 1 0; height: 674.16px; justify-content: center; align-items: center; display: flex">
         <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: inline-flex">
             <div style="align-self: stretch; text-align: center; color: white; font-size: 48px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">Overview</div>
@@ -96,7 +96,7 @@ pageOrder: 1
 </div>
 
 <div style="width: 100%; height: 100%; justify-content: center; align-items: center; gap: 26px; display: inline-flex">
-<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 101px; padding-top: 50px; padding-bottom: 50px; background: black; justify-content: center; align-items: center; gap: 191px; display: inline-flex">
+<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 101px; padding-top: 50px; padding-bottom: 50px;justify-content: center; align-items: center; gap: 191px; display: inline-flex">
     <div style="height: 674.16px;flex: 1 1 0; flex-direction: column; justify-content: center; align-items: center; gap: 120px; display: inline-flex">
         <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: flex">
             <div style="align-self: stretch; text-align: center; color: white; font-size: 48px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">How does this project works</div>
@@ -158,7 +158,7 @@ pageOrder: 1
     </div>
 
 <div style="width: 100%; height: 100%; justify-content: center; align-items: center; gap: 26px; display: inline-flex">
-<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-top: 50px; padding-bottom: 50px; background: black; justify-content: center; align-items: center; gap: 191px; display: inline-flex">
+<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; gap: 191px; display: inline-flex">
     <div style="gap: 220px; flex: 1 1 0; height: 674.16px; justify-content: center; align-items: center; display: flex">
         <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: inline-flex">
             <div style="align-self: stretch; text-align: center; color: white; font-size: 48px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">Overview</div>
@@ -222,7 +222,7 @@ pageOrder: 1
 
 
 <div style="width: 100%; height: 100%; justify-content: center; align-items: center; gap: 26px; display: inline-flex">
-<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-top: 50px; padding-bottom: 50px; background: black; justify-content: center; align-items: center; display: inline-flex">
+<div style="width: 100%; height: 100%; padding-left: 0px; padding-right: 0px; padding-top: 50px; padding-bottom: 50px; justify-content: center; align-items: center; display: inline-flex">
     <div style="height: 674.16px;flex: 1 1 0; flex-direction: column; justify-content: center; align-items: center; gap: 120px; display: inline-flex">
         <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: flex">
             <div style="align-self: stretch; text-align: center; color: white; font-size: 48px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">How does this project works</div>

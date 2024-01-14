@@ -1,6 +1,6 @@
 // INTERACTIVE TYPE
 const interactiveTypeBlack = (p) => {
-  let gridSize = 5;
+  let gridSize = 3;
   const points = [];
   let mutationRange = [-70, 70];
   const initialMutationLowerBound = mutationRange[0];
@@ -13,25 +13,52 @@ const interactiveTypeBlack = (p) => {
     var container = document.getElementById('interactive-type');
     p.createCanvas(container.offsetWidth, container.offsetHeight);
 
-    p.background(0);
-    p.textFont(font);
-    p.textSize(p.width / 4);
-    p.textAlign(p.CENTER, p.CENTER);
-    p.fill(255);
-    p.text('數位', p.width/2, p.height/2);
-    p.frameRate(60);
+    // Define the grid pattern
+    const grid = [
+        "              ",
+        "              ",
+        "  2222222     ",
+        "  2     2     ",
+        "  2     2     ",
+        "  2  3456111  ",
+        "  2  4  5  1  ",
+        "  2  5  4  1  ",
+        "  2226543  1  ",
+        "     1     1  ",
+        "     1     1  ",
+        "     1111111  ",
+        "              ",
+        "              ",
+        "              ",
+    ];
 
-    p.loadPixels();
-    for (let y = 0; y < p.height; y += gridSize) {
-      for (let x = 0; x < p.width; x += gridSize) {
-        let r = p.get(x, y)[0];
-        if (r > 128) {
-          points.push(p.createVector(x,y));
-        }
+    const d = Math.min(p.height, p.width);
+    if (d < 400) return;
+    const isFilled = (x, y) => (Math.ceil(grid[Math.floor(y / d * 14)][Math.floor(x / d * 14)]));
+    const isSkipped = (x_or_y) => Math.floor(x_or_y / d * 27) % 2; // interleaving rows and columns
+    for (let x = 0; x < d; x += gridSize) {
+      if (isSkipped(x)) continue;
+      for (let y = 0; y < d; y += gridSize) {
+        if (isSkipped(y)) continue;
+        n = isFilled(x, y);
+        if (!n) continue;
+        let ds = [-gridSize*2, -gridSize, 0, gridSize, gridSize*2];
+        let neighborsSkipped = ds.map(dx => ds.map(dy => isSkipped(x + dx) && isSkipped(y + dy))).flat().filter(x=>x).length;
+        if (n == 2 && neighborsSkipped >= 1) continue;
+        if (n >= 3 && neighborsSkipped >= 3) continue;
+        points.push(p.createVector(x, y, n));
       }
     }
   }
 
+  const codeToColor = {
+    1: [127, 127, 127],
+    2: [127, 127, 127],
+    3: [214, 73, 51],
+    4: [17, 176, 209],
+    5: [10, 124, 89],
+    6: [251, 176, 60],
+  }
   p.draw = function() {
     p.background(0);
 
@@ -41,9 +68,9 @@ const interactiveTypeBlack = (p) => {
       let y = points[i].y;
       x += p.random(mutationRange[0], mutationRange[1]) * p.random(1.5);
       y += p.random(mutationRange[0], mutationRange[1]) * p.random(1.5);
-
-      p.stroke(255);
-      p.fill(0);
+      let color = codeToColor[points[i].z];
+      p.stroke(color[0], color[1], color[2]);
+      p.fill(color[0], color[1], color[2]);
       p.circle(x, y, gridSize/2);
     }
   }
