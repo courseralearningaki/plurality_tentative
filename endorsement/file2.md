@@ -1,0 +1,7 @@
+---
+tags:
+  [
+  animation
+  ]
+---
+# Plurality Institute
