@@ -1,6 +1,7 @@
 const pluginTOC = require('eleventy-plugin-toc')
 const htmlmin = require("html-minifier");
 const EleventyFetch = require('@11ty/eleventy-fetch');
+const { EleventyRenderPlugin } = require('@11ty/eleventy');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary(
@@ -14,6 +15,43 @@ module.exports = function(eleventyConfig) {
     tags: ['h1', 'h2', 'h3'],
     ul: true,
     wrapper: 'div'
+  });
+
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  eleventyConfig.addAsyncShortcode('readdynamiccodeRender', async (url,fallback_url) => {
+    const log_text = `The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`
+    const log_text_shown_from_fallback = `The resource of fallback location at "${fallback_url} will be used if available."`
+    const screen_text =  "Please revisit this page later. The page is currently unavailable but will become available soon."
+    const renderTemplateInside = eleventyConfig.javascriptFunctions.renderTemplate;
+    const shortcodeFetch = (url,fallback_url) => {
+      try {
+        let returnedContent = EleventyFetch(url, {
+          duration: '1m',
+          type: 'text',
+          verbose: true
+        }).then(
+         function(response){
+           let text = renderTemplateInside(response,'md');
+           console.log("post:",text)
+           return text;
+         }
+        ).catch(error => {
+          console.log(log_text,error);
+          if (fallback_url != null ){
+            console.log(log_text_shown_from_fallback)
+            return shortcodeFetch(fallback_url,null);
+          } else {
+            return screen_text;
+          }
+        });
+        return returnedContent;
+      } catch (e) {
+        console.log(log_text);
+        return screen_text;
+      }
+    }
+    return shortcodeFetch(url,fallback_url);
   });
 
   eleventyConfig.addAsyncShortcode('readdynamiccode', async (url,fallback_url) => {

@@ -1,0 +1,12 @@
+---
+pagination:
+    data: repos
+    size: 1
+    alias: repoendorse
+permalink: "repo/{{ repoendorse.name | slugify }}/"
+---
+
+
+
+{% readdynamiccodeRender repoendorse.download_url %}
+
