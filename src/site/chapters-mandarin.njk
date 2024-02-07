@@ -1,0 +1,67 @@
+---
+layout: home
+permalink: "/chapters-zh-tw/"
+---
+
+{%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
+<div>
+    <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
+        <center>
+        <img width="121px" height="182px" src='../assets/favicons/bookcover_small.png'>
+        </center>
+    </div>
+    <div style="display:grid;float:left;margin:196px 0 0 64px;height:182px; width:600px;min-width:500px;">
+        <h2 style="font-size:48px">
+        <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
+        </h2>
+        <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
+<div style="display:inline-block;">
+    </div>
+    </div>
+</div>
+<table>
+<tr>
+<td valign="top">
+<div id="version-menu">
+  <ol id="version-ol">
+<div>
+    {% for version in collections.chapterversions |sortDataByChapteridSubidLanguageIso %}
+{% if ((version.data.language.en) == 'Mandarin/華文')%}
+
+{% if ((version.data.chapterid.chapterid_subid) == '01') %}
+          <li style="font-size:40px;padding:0 28px;">Section {{ version.data.chapterid.chapterid }}</li>
+    <div>
+        {% endif %}
+
+{% if ((version.data.chapterid.chapterid_subid) == '03-00')
+    or ((version.data.chapterid.chapterid_subid) == '02')
+    or ((version.data.chapterid.chapterid_subid) == '04-00' )
+    or ((version.data.chapterid.chapterid_subid) == '05-00' )
+    or ((version.data.chapterid.chapterid_subid) == '06-00' )
+    or ((version.data.chapterid.chapterid_subid) == '07-01' )
+    %}
+</div>
+          <li style="font-size:40px;padding:0 28px;">Section {{ version.data.chapterid.chapterid }}</li>
+    <div>
+        {% endif %}
+
+        {{ chapterVersionMenuItemIndividualLanguage(
+          githubLink = version.data.githubLink,
+          dayStarted = version.data.dateStartedString.day,
+          monthStarted = version.data.dateStartedString.month,
+          yearStarted = version.data.dateStartedString.year,
+          language = version.data.language.en,
+          contributeTranslated = version.data.translations.contribute,
+          pluralityTranslated = version.data.translations.plurality,
+          subtitleTranslated = version.data.translations.subtitle,
+          pageTitle = version.data.title,
+          pageUrl = version.url,
+          chapterid_subid = version.data.chapterid.chapterid_subid)
+        }}
+        {% endif %}
+    {% endfor %}
+</div>
+</td>
+</tr>
+</table>
+{% include "partials/footer.njk" %}

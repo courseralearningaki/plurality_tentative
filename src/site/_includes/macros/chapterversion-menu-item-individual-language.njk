@@ -1,0 +1,14 @@
+{% macro chapterVersionMenuItemIndividualLanguage(githubLink, dayStarted, yearStarted, monthStarted, language, contributeTranslated, pluralityTranslated,subtitleTranslated, pageTitle, pageUrl,chapterid_subid) %}
+
+<p>
+
+<div style="color:#26b72b; background:rgba(255,255,255,0.20) ; border-radius: 32px; padding:28px;gap:24px;margin:16px 0px">
+        <span style="display:inline-block;width:128px; font-size:36px;">{{chapterid_subid}}</span>
+        <span style="display:inline-block;width:60%; font-size:36px;">{{subtitleTranslated}}</span>
+        <span style="text-transform: none;"><a href="{{ pageUrl }}" class="button_small">Read in {{ language }}</a></span>
+      {% if githubLink %}
+        <span><a href="{{ githubLink }}">&#8599;&#xFE0E;</a></span>
+      {% endif %}
+</div>
+
+{% endmacro %}
