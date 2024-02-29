@@ -1,0 +1,5 @@
+{
+  "layout": "version",
+  "permalink": "/v/langs/{{chapterid.chapterid_subid | slug }}/{{ language.iso6392B | slug }}/",
+  "tags": "langu"
+}

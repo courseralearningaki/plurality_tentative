@@ -1,0 +1,74 @@
+---
+layout: home
+permalink: "/chapters-ja/"
+eleventyImport:
+  collections: ["language_repo","lang"]
+---
+
+<div>
+    <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
+        <center>
+        <img width="121px" height="182px" src='../assets/favicons/bookcover_small.png'>
+        </center>
+    </div>
+    <div style="display:grid;float:left;margin:196px 0 0 64px;height:182px; width:600px;min-width:500px;">
+        <h2 style="font-size:48px">
+        <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
+        </h2>
+        <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
+<div style="display:inline-block;">
+    </div>
+    </div>
+</div>
+<table>
+<tr>
+<td valign="top">
+<div id="version-menu">
+  <ol id="version-ol">
+<div>
+        {% for versions in collections.all %}
+        {% for version in versions %}
+    {{ version.data }}
+    {{ version.name }}
+{% endfor %}
+{% endfor %}
+<div>
+    {% for version in collections.langu %}{{ version.data }}{% endfor %}
+</div>
+<div>
+    {% for version in collections.lang %}{{ version.data }}{% endfor %}
+</div>
+<div>
+    {% for version in collections.chapters-meta %}{{ version.data }}{% endfor %}
+</div>
+<div>
+    {% for version in _data %}{{ version }}{% endfor %}
+</div>
+
+<div>
+    {% for version in data %}{{ version }}{% endfor %}
+</div>
+
+<div>
+    {% for version in data.language_repo %}{{ version }}{% endfor %}
+</div>
+
+<div>
+    {% for version in collections.chapterversions %}{{ version.data }}{% endfor %}
+</div>
+
+<div>
+    {% for version in collections.language %}{{ version.data }}{% endfor %}
+</div>
+<div>
+    {% for version in collections.languages %}{{ version.data }}{% endfor %}
+</div>
+
+
+</div>
+    <div>
+    </div>
+</td>
+</tr>
+</table>
+{% include "partials/footer.njk" %}

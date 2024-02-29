@@ -1,0 +1,12 @@
+---
+pagination:
+    data: language_repo
+    size: 1
+    alias: lang
+permalink: "/chapters-meta/{{ lang.name | safe }}/"
+layout: version
+---
+{{lang.name}} is {{lang.download_url}}
+<div>
+{% readdynamiccodeRender lang.download_url %}
+</div>
