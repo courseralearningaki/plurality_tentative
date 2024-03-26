@@ -86,16 +86,16 @@ module.exports = function(eleventyConfig) {
     return shortcodeFetch(url,fallback_url);
   });
 
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-  });
+  // eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  //   if( outputPath.endsWith(".html") ) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true
+  //     });
+  //     return minified;
+  //   }
+  // });
 
   eleventyConfig.addFilter("sortByPageOrder", (obj) => {
     const sorted = [];

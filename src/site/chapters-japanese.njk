@@ -4,6 +4,7 @@ permalink: "/chapters-ja-jp/"
 eleventyImport:
   collections: ["language_repo_ja"]
 ---
+{%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
 
 <div>
     <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
@@ -26,19 +27,48 @@ eleventyImport:
 <div id="version-menu">
   <ol id="version-ol">
     <div>
+{% for repo in language_repo_ja %}
+{% if ((repo.id_of_part) == '1') %}
+    <li style="font-size:40px;padding:0 28px;">Section {{ repo.id_of_part }}</li>
+    <div>
+{% endif %}
+
+{% if  ((repo.id_of_part) == '0-0')
+    or ((repo.id_of_part) == '2-0')
+    or ((repo.id_of_part) == '3-0')
+    or ((repo.id_of_part) == '4-0' )
+    or ((repo.id_of_part) == '5-0' )
+    or ((repo.id_of_part) == '6-0' )
+    or ((repo.id_of_part) == '7-0' )
+    or ((repo.id_of_part) == '8-0' )
+    %}
+</div>
+          <li style="font-size:40px;padding:0 28px;">Section {{ repo.id_of_part }}</li>
+    <div>
+{% endif %}
+
+        {{ chapterVersionMenuItemIndividualLanguage(
+          githubLink = repo.githubLink,
+          pageTitle = repo.id_of_part,
+          subtitleTranslated = repo.name_of_part,
+          pageUrl = "/v/chapters/" + repo.id_of_part + "/ja",
+          language = "Japanese",
+          chapterid_subid = repo.id_of_part)
+        }}
+{% endfor %}
+
+</div>
+</td>
+</tr>
+</table>
 {% if language_repo_ja.length > 0 %}
   <p>Number of Repositories: {{ language_repo_ja.length }}</p>
   <table>
     {% for repo in language_repo_ja %}
-      <a href="/chapters/ja/{{ repo.id_of_part }}" target="_blank">{{repo.id_of_part}} : {{repo.name_of_part}}</a>
-      <br>
+      <a href="/v/chapters/{{ repo.id_of_part }}/ja" target="_blank">{{repo.id_of_part}} : {{repo.name_of_part}}</a>
     {% endfor %}
   </table>
 {% else %}
     <p>No language repository data to display</p>
 {% endif %}
-</div>
-</td>
-</tr>
-</table>
 {% include "partials/footer.njk" %}
