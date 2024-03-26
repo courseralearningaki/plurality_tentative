@@ -1,8 +1,8 @@
 ---
 layout: home
-permalink: "/chapters-ja/"
+permalink: "/chapters-ja-jp/"
 eleventyImport:
-  collections: ["language_repo","lang"]
+  collections: ["language_repo_ja"]
 ---
 
 <div>
@@ -25,49 +25,19 @@ eleventyImport:
 <td valign="top">
 <div id="version-menu">
   <ol id="version-ol">
-<div>
-        {% for versions in collections.all %}
-        {% for version in versions %}
-    {{ version.data }}
-    {{ version.name }}
-{% endfor %}
-{% endfor %}
-<div>
-    {% for version in collections.langu %}{{ version.data }}{% endfor %}
-</div>
-<div>
-    {% for version in collections.lang %}{{ version.data }}{% endfor %}
-</div>
-<div>
-    {% for version in collections.chapters-meta %}{{ version.data }}{% endfor %}
-</div>
-<div>
-    {% for version in _data %}{{ version }}{% endfor %}
-</div>
-
-<div>
-    {% for version in data %}{{ version }}{% endfor %}
-</div>
-
-<div>
-    {% for version in data.language_repo %}{{ version }}{% endfor %}
-</div>
-
-<div>
-    {% for version in collections.chapterversions %}{{ version.data }}{% endfor %}
-</div>
-
-<div>
-    {% for version in collections.language %}{{ version.data }}{% endfor %}
-</div>
-<div>
-    {% for version in collections.languages %}{{ version.data }}{% endfor %}
-</div>
-
-
-</div>
     <div>
-    </div>
+{% if language_repo_ja.length > 0 %}
+  <p>Number of Repositories: {{ language_repo_ja.length }}</p>
+  <table>
+    {% for repo in language_repo_ja %}
+      <a href="/chapters/ja/{{ repo.id_of_part }}" target="_blank">{{repo.id_of_part}} : {{repo.name_of_part}}</a>
+      <br>
+    {% endfor %}
+  </table>
+{% else %}
+    <p>No language repository data to display</p>
+{% endif %}
+</div>
 </td>
 </tr>
 </table>
