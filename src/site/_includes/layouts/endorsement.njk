@@ -1,0 +1,149 @@
+{%- from 'macros/nav.njk' import renderNav -%}
+{%- from 'macros/mobile-nav.njk' import renderMobileNav -%}
+{% extends "layouts/base.njk" %}
+
+{% block headerScripts %}
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/interactive-characters.js"></script>
+{% endblock %}
+
+{% block topNav %}
+  {{ renderNav(
+  leftData = [
+    {
+      title: 'Plurality icon',
+      imgpath: '../assets/favicons/header.png',
+      path: '/',
+      icon: true
+    }
+  ],
+  centreData = [
+    {
+      title: 'Plurality: The Future of Collaborative Technology and Democracy',
+      path: '/'
+    }
+  ],
+  rightData = [
+    {
+      title: 'Join us',
+      path: 'https://github.com/pluralitybook',
+      external: true
+    },
+    {
+      title: 'Sections',
+      path: '../chapters/',
+      external: false
+    },
+    {
+      title: 'EN',
+      path: '../chapters-eng/',
+      external: false
+    },
+    {
+      title: '華',
+      path: '../chapters-zh-tw/',
+      external: false
+    },
+    {
+      title: '日',
+      path: '../chapters-ja-jp/',
+      external: false
+    },
+    {
+      title: 'Endorsement',
+      path: '../endorsement/',
+      external: false
+    },
+    {
+      title: 'Endorsements',
+      path: '../endorsements/',
+      external: false
+    },
+    {
+      title: 'Announcement',
+      path: '../announcement/',
+      external: false
+    },
+    {
+      title: 'Twitter',
+      path: 'https://twitter.com/pluralitybook',
+      external: true
+    }
+  ]
+  ) }}
+  {{ renderMobileNav(
+    leftData = [
+      { 
+        toggleOverlay: true
+      }
+    ],
+    rightData = [
+      {
+        title: 'Plurality: The Future of Collaborative Technology and Democracy',
+        path: '/'
+      }
+    ],
+    overlayData = [
+      {
+        title: 'Plurality',
+        path: '/'
+      },
+      {
+        title: 'Announcement',
+        path: '../announcement/',
+        external: false
+      },
+    {
+      title: 'Endorsement',
+      path: '../endorsement/',
+      external: false
+    },
+    {
+      title: 'Endorsements',
+      path: '../endorsements/',
+      external: false
+    },
+    {
+      title: 'Sections',
+      path: '../chapters/',
+      external: false
+    },
+    {
+      title: 'EN',
+      path: '../chapters-eng/',
+      external: false
+    },
+    {
+      title: '華',
+      path: '../chapters-zh-tw/',
+      external: false
+    },
+    {
+      title: '日',
+      path: '../chapters-ja-jp/',
+      external: false
+    },
+      {
+        title: 'Twitter',
+        path: 'https://twitter.com/pluralitybook',
+        external: true
+      }
+    ]
+  ) }}
+{% endblock %}
+
+{% block mainColContent %}
+<div style="margin-bottom:64px;height:64px;"></div>
+<div id="endorse">
+  {{ content | safe }}
+</div>
+{% endblock %}
+
+{% block extraneousContent %}
+  <div id="interactive-type"></div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+{% block footerScripts %}
+  <script src="{{ site.baseurl }}/assets/js/scroll-position.js"></script>
+{% endblock %}
