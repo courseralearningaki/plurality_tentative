@@ -5,7 +5,7 @@ dateStartedString: { day: '10', month: '01', year: '2024' }
 language: { en: 'english', iso6392B: 'eng', locale: 'english' }
 chapterid: { chapterid: endorsement, chapterid_subid: 'endorsement'}
 translators: []
-layout: home
+layout: endorsement
 pageOrder: 1
 ---
 <br>
