@@ -19,6 +19,15 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
+  eleventyConfig.addAsyncShortcode('readdynamiccodeRenderFromText', async (mdfile_text) => {
+    const renderTemplateInside = eleventyConfig.javascriptFunctions.renderTemplate;
+    let text = await renderTemplateInside(mdfile_text,'md');
+    console.log("mdfile_text")
+    console.log(mdfile_text);
+    console.log(text);
+    return text;
+  });
+
   eleventyConfig.addAsyncShortcode('readdynamiccodeRender', async (url,fallback_url) => {
     const log_text = `The location of the resource is defined in the md file but was not accessible. The URL is "${url}"`
     const log_text_shown_from_fallback = `The resource of fallback location at "${fallback_url} will be used if available."`

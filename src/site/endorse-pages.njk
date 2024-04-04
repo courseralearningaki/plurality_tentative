@@ -3,10 +3,14 @@ pagination:
     data: repos
     size: 1
     alias: repoendorse
-permalink: "repo/{{ repoendorse.name | slugify }}/"
+permalink: "repo/{{ repoendorse.name | slugify }}/{{ repoendorse.tags | slugify }}/"
 ---
 
 
+<ol>
+{%- for item in pagination.items %}
+  <li>{{ item }}={{tags[item] }}/{{ item.tags }}/{{ item.data.tags }}</li>
+{% endfor -%}
+</ol>
 
-{% readdynamiccodeRender repoendorse.download_url %}
-
+{% readdynamiccodeRenderFromText repoendorse.md_file %}
