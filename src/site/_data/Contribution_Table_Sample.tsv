@@ -1,28 +1,66 @@
-"Row Labels"	"Main Contribution Category"	"Sum of Total"	"percent of total contribution type"	"round down"	"Font Size"	"Hyperlink"
-"name one"	"(blank)"		"1%"	"1%"	15	
-"name two"	"(blank)"		"99%"	"99%"	71	
-"Carl Cervone"	"Data"		"74%"	"73%"	57	
-"Greg Wang"	"Editing"		"8%"	"7%"	19	
-"Nishio Hirokazu"	"Editing"		"7%"	"6%"	18	
-"omoaholo"	"Editing"		"4%"	"3%"	17	
-"Vitalik Buterin"	"Editing"		"14%"	"13%"	22	
-"(blank)"	"Editing"		"7%"	"7%"	19	
-"Jason Entenmann"	"Management"		"100%"	"100%"	72	
-"Shaurya Dubey"	"PR"		"100%"	"100%"	72	
-"Gisele Chou"	"Research"		"79%"	"79%"	60	
-"Shrey Jain"	"Research"		"0%"	"1%"	15	
-"Akinori Oyama"	"Technical"		"35%"	"34%"	34	
-"Kasia Sitkiewicz"	"Technical"		"17%"	"16%"	24	
-"Petar Maymounkov"	"Technical"		"32%"	"31%"	33	
-"Andreas Fauler"	"Translation"		"7%"	"7%"	19	
-"Jacky"	"Translation"		"56%"	"55%"	46	
-"Leon Erichsen"	"Translation"		"0%"	"1%"	15	
-"mashbean"	"Translation"		"0%"	"1%"	15	
-"???"	"Translation"		"7%"	"7%"	19	
-"Lillian Wang"	"Visual"		"37%"	"36%"	35	
-"owocki"	"Visual"		"1%"	"1%"	15	
-"tofus"	"Visual"		"49%"	"49%"	43	
-"Matt Prewitt"	"Writing"		"5%"	"5%"	18	
-"Noah Yeh"	"Writing"		"14%"	"13%"	22	
-"Puja Ohlhaver"	"Writing"		"21%"	"20%"	26	
-"(blank)"	"Writing"		"0%"	"1%"	15	
+"RowLabels"	"Font Size"	"MainContirbutionCategory"
+"Carl Cervone"	57	"Data"
+"Jordan Usdan"	28	"Data"
+"Jeffrey Fossett"	16	"Data"
+"Nick Pyati"	26	"Editing"
+"Jeremy Laure"	26	"Editing"
+"Vitalik Buterin"	22	"Editing"
+"Greg Wang"	19	"Editing"
+"Nishio Hirokazu"	18	"Editing"
+"Junsol Kim"	18	"Editing"
+"Ryan McGranaghan"	71	"Editing"
+"Kaliya young"	17	"Editing"
+"omoaholo"	17	"Editing"
+"Christian Paquin"	17	"Editing"
+"Wes chow"	16	"Editing"
+"Zo? Hitzig"	15	"Editing"
+"billy3321"	15	"Editing"
+"Teddy Lee"	15	"Editing"
+"dAAAb"	15	"Editing"
+"Ko Ju-Chun"	15	"Editing"
+"mickm3n"	15	"Editing"
+"Ryan McGranaghan"	15	"Editing"
+"yzaya"	15	"Editing"
+"Jason Entenmann"	72	"Management"
+"Shaurya Dubey"	72	"PR"
+"Gisele Chou"	60	"Research"
+"James Allen Evans"	18	"Research"
+"nickmvincent"	18	"Research"
+"Joshua Yang"	17	"Research"
+"Mateo Patel"	17	"Research"
+"Peter Hart"	15	"Research"
+"Dan Silver"	15	"Research"
+"Jamie Joyce"	15	"Research"
+"Shrey Jain"	15	"Research"
+"Akinori Oyama"	34	"Technical"
+"Petar Maymounkov"	33	"Technical"
+"Derek Worthen"	24	"Technical"
+"Kasia Sitkiewicz"	24	"Technical"
+"Julia Metcalf"	15	"Technical"
+"Tyler Flajole"	15	"Technical"
+"Jacky"	46	"Translation"
+"Max Semenchuk"	19	"Translation"
+"Michal"	19	"Translation"
+"Vassilis Tziokas"	19	"Translation"
+"???"	19	"Translation"
+"Andreas Fauler"	19	"Translation"
+"Daniel Alsterholm"	19	"Translation"
+"mashbean"	15	"Translation"
+"Leon Erichsen"	15	"Translation"
+"tofus"	43	"Visual"
+"Lillian Wang"	35	"Visual"
+"Andrea Bonaceto"	22	"Visual"
+"owocki"	15	"Visual"
+"Judith Amores"	26	"Writing"
+"Puja Ohlhaver"	26	"Writing"
+"Noah Yeh"	22	"Writing"
+"JJ Reynolds-Strange"	21	"Writing"
+"Kinney Zalesne"	21	"Writing"
+"Tantum Collins"	18	"Writing"
+"Geordan Shannon"	18	"Writing"
+"Matt Prewitt"	18	"Writing"
+"Michele Zanini"	17	"Writing"
+"Holly Herndon"	16	"Writing"
+"Mat Dryhurst"	16	"Writing"
+"jonas-kgomo"	15	"Writing"
+"(blank)"	15	"Writing"

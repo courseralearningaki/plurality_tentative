@@ -1,25 +1,19 @@
 ---
-layout: home
+layout: version
 permalink: "/contribution/"
 ---
-{%- for contributor in contribution -%}
-    <div>
-        {{ contributor[0] | safe }}:
-        {{ contributor[1] | safe }}<br></br>
-    </div>
-{%- endfor -%}
 
-<center>
-{% for category, items in contributor_from_file | groupby('Main Contribution Category') %}
-    <div style="font-size:64px;text-transform: uppercase;"><b>{{ category }}</b></div>
+
+{% for category, items in contributor_from_file | groupby('MainContirbutionCategory') %}
+<blockquote>
+    <h2 id="version-title-{{ category }}" style="font-size:64px;text-transform: uppercase;">{{ category }}</h2>
     {% for item in items %}
     <div style="font-size:{{ item['Font Size'] | safe }}px;">
-        {{ item['Row Labels'] | safe }}:
-        {{ item['Sum of Total'] | safe }}<br></br>
+        {{ item['RowLabels'] | safe }}
     </div>
 
     {% endfor %}<br>
+</blockquote>
+<hr>
 {% endfor %}
-</center>
-
 {% include "partials/footer.njk" %}
