@@ -22,7 +22,7 @@
   /*position: fixed;*/
   top: 0;
   right: 0;
-  width: 80%;
+  width: 70%;
   height: 100%;
   overflow-y: scroll;
   padding: calc(var(--top-offset)) calc(var(--padding-step-5)) 0 calc(var(--padding-step-5));
@@ -37,7 +37,7 @@
   left: 0;
   top: 0;
   width: 20%;
-  padding: calc(var(--top-offset)) calc(var(--padding-step-5)) 0 calc(var(--padding-step-5));
+  padding: calc(var(--top-offset)) 0 0 calc(var(--padding-step-5));
 }
 
 #version-wrapper > #version-content > #version-data {
@@ -59,9 +59,9 @@
 
 #version-wrapper > #version-content > #version-data > span > p {
   font-size: var(--font-size-step-1);
-  line-height: var(--font-size-step-1);
+  line-height: calc(var(--font-size-step-1) * 1.5);
   font-style: italic;
-  font-family: var(--font-family-alt);
+  font-family: Iansui;
 }
 
 #version-wrapper > #version-index > #version-index-toggle-mobile {
@@ -91,6 +91,15 @@
   display: block;
 }
 
+#version-wrapper > #version-index > #version-index-content > .toc ul ul {
+  padding-left: 20px;
+}
+
+#version-wrapper > #version-index > #version-index-content > .toc ul > li > a,
+#version-wrapper > #version-index > #version-index-content > .toc ol > li > a {
+  font-family: Iansui;
+}
+
 #version-wrapper > #version-index > #version-index-content > .toc > ol {
   list-style-type: none;
 }
@@ -113,6 +122,10 @@
   padding-bottom: var(--padding-step-4);
 }
 
+#version-md img {
+  max-width: 100%;
+}
+
 #version-md > *, #version-md > * > *,
 #version-md > * > * > *, #version-md > * > * > * > * {
   font-family: var(--font-family-alt);
@@ -124,32 +137,39 @@
   padding: 0.5em 10px;
 }
 
+#version-md blockquote p, #version-md blockquote p strong {
+  font-family: Iansui;
+  line-height: 1.625;
+  font-size: 18px;
+}
+
 #version-md strong {
   font-weight: bold;
 }
 
-#version-md > p {
-  margin-bottom: var(--padding-step-2);
-  font-size: var(--font-size-step-1);
-  line-height: calc(var(--font-size-step-1) * 1.3);
+#version-md p, #version-md li {
+  margin-bottom: calc(var(--padding-step-2) * 2);
+  font-size: 18px;
+  line-height: calc(var(--font-size-step-1) * 1.625);
+  font-weight: 300;
 }
 
 #version-md > h1, #version-md > h2, #version-md > h3,
 #version-md > h4, #version-md > h5, #version-md > h6 {
-  font-size: var(--font-size-step-3);
-  line-height: var(--font-size-step-3);
+  font-size: calc(var(--font-size-step-3) * 1.125);
+  line-height: calc(var(--font-size-step-3) * 1.625);
   margin: 0 0 var(--padding-step-3) 0;
   padding-top: var(--padding-step-3);
-  font-family: var(--font-family);
+  font-family: Iansui;
   font-weight: bold;
 }
 
 #version-md > h1:nth-child(n+2) {
-  font-size: var(--font-size-step-3);
-  line-height: var(--font-size-step-3);
+  font-size: calc(var(--font-size-step-3) * 1.125);
+  line-height: calc(var(--font-size-step-3) * 1.625);
   padding-top: var(--padding-step-3);
   margin: var(--padding-step-4) 0 var(--padding-step-3) 0 !important;
-  font-family: var(--font-family);
+  font-family: Iansui;
   font-weight: bold;
 }
 
@@ -203,13 +223,23 @@
 }
 
 #version-md ol, #version-md ul {
-  margin: 0 0 var(--padding-step-2) 0;
+  margin: 0 0 calc(var(--padding-step-2)*3) 0;
+  line-height: 1.625;
 }
 
 #version-md ol li, #version-md ul li {
   margin: 0 0 var(--padding-step-1) 0;
 }
 
+#version-md ol li.footnote-item p {
+  word-wrap: break-word;
+  font-size: var(--font-size-step-1);
+  font-family: var(--font-family-alt);
+}
+
+#version-md ol li.footnote-item p a {
+  font-family: var(--font-family-alt);
+}
 
 /* MOBILE HANDLING */
 @media screen and (max-width: 768px) {

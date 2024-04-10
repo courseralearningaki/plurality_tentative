@@ -1,12 +1,12 @@
 <div id="version-wrapper">
   <div id="version-index">
-    <div id="version-index-content">{{ content | toc | safe }}</div>
+    <div id="version-index-content">{{ content | replace("h1", "h2") | toc | safe }}</div>
     <div id="version-index-toggle-mobile">
       <a>
         {% if translations.chapters %}{{translations.chapters}} (+){% else %}Sections (+){% endif %}
       </a>
     </div>
-    <div id="version-index-content-mobile">{{ content | toc | safe }}</div>
+    <div id="version-index-content-mobile">{{ content | replace("h1", "h2") | toc | safe }}</div>
   </div>
   <div id="version-content">
     <div id="version-data">
@@ -41,7 +41,6 @@
     </div>
   </div>
 </div>
-
 <script>
   var versionIndexToggled = false;
   document

@@ -11,7 +11,7 @@ translations:
     return: 'return',
     chapters: 'chapters',
   }
-language: { en: 'russian', iso6392B: 'rus', locale: 'Русские' }
+language: { en: 'russian', iso6392B: 'rus', locale: 'Русский' }
 translators: []
 ---
 

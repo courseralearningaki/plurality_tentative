@@ -2,8 +2,9 @@
 const interactiveTypeBlack = (p) => {
   let gridSize = 3;
   const points = [];
-  let mutationRange = [-70, 70];
+  let mutationRange = [-40, 40];
   const initialMutationLowerBound = mutationRange[0];
+  let touchPointOld = 0;
 
   p.preload = function() {
     font = 'monospace';
@@ -76,6 +77,7 @@ const interactiveTypeBlack = (p) => {
   }
 
   p.mouseWheel = function(event) {
+    if (location.pathname === '/') { return; }
     const rangeStep = 10;
     if (event.delta > 0 && mutationRange[0] < 0) {
       mutationRange = [mutationRange[0] + rangeStep, mutationRange[1] - rangeStep];
@@ -85,6 +87,24 @@ const interactiveTypeBlack = (p) => {
       mutationRange = [mutationRange[0] - rangeStep, mutationRange[1] + rangeStep];
       gridSize -= 0.1;
     }
+  }
+
+  p.touchMoved = function(event) {
+    if (location.pathname === '/') { return; }
+    const rangeStep =10;
+    if (!("touches" in event)){
+      return
+    }
+    let touchDelta = touchPointOld - event.touches[0].clientY;
+    if (touchDelta > 0 && mutationRange[0] < 0) {
+      mutationRange = [mutationRange[0] + rangeStep, mutationRange[1] - rangeStep];
+      gridSize += 0.001;
+    }
+    if (touchDelta < 0 && gridSize > 1 && mutationRange[0] > initialMutationLowerBound) {
+      mutationRange = [mutationRange[0] - rangeStep, mutationRange[1] + rangeStep];
+      gridSize -= 0.001;
+    }
+    touchPointOld = event.touches[0].clientY;
   }
 
   p.windowResized = function() {

@@ -4,25 +4,56 @@ permalink: "/chapters/"
 ---
 
 {%- from './_includes/macros/chapterversion-menu-item.njk' import chapterVersionMenuItem -%}
-<div>
-    <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
+<div id="chapter_container_mobile">
+    <div style="margin:160px 0 0 0;height:182px;min-width:122px;">
         <center>
-        <img width="121px" height="182px" src='../assets/favicons/bookcover_small.png'>
+        <img width="146px" height="182px" src='../assets/favicons/bookcover_small.png'>
         </center>
     </div>
-    <div style="display:grid;float:left;margin:196px 0 0 64px;height:182px; width:600px;min-width:500px;">
+    <div style="margin-top:36px;">
+        <center>
         <h2 style="font-size:48px">
         <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
         </h2>
         <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
 <div style="display:inline-block;">
     </div>
+<div>
+            <span style="font-size:14px;font-family: Jost; display: inline-block; margin-bottom: 8px">You can read our working draft on this website, or you can download it to read offline:</span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.pdf" class="button_small" style="margin-bottom: 3px;">English (PDF)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.pdf" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (PDF)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.epub" class="button_small" style="margin-bottom: 3px;">English (ePub)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.epub" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (ePub)</a></span>
+</div>
+            </center>
     </div>
 </div>
+<div id="chapter_container_terminal">
+    <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
+        <center>
+        <img width="146px" height="182px" src='../assets/favicons/bookcover_small.png'>
+        </center>
+    </div>
+
+    <div style="display:grid;float:left;margin:136px 0 0 64px;height:242px; width:600px;min-width:500px;">
+        <h2 style="font-size:48px">
+        <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
+        </h2>
+        <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
+<div style="display:inline-block;">
+    </div>
 <div>
-{% readdynamiccodeRender 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/00-finding-your-dao.md' %}
+            <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">You can read our working draft on this website, or you can download it to read offline:</span>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.pdf" class="button_small" style="margin-bottom: 3px;">English (PDF)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.pdf" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (PDF)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.epub" class="button_small" style="margin-bottom: 3px;">English (ePub)</a></span><br>
+            <span style="text-transform: none;"><a href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.epub" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (ePub)</a></span>
 </div>
-<table>
+    </div>
+</div>
+
+<table id="chapter_container_table">
+    <center>
 <tr>
 <td valign="top">
 <div id="version-menu">
@@ -31,20 +62,21 @@ permalink: "/chapters/"
     {% for version in collections.chapterversions |sortDataByChapteridSubidLanguageIso %}
 {% if ((version.data.language.en) == 'english')%}
 </div>
-{% if ((version.data.chapterid.chapterid_subid) == '01') %}
-          <li style="font-size:40px;padding:0 28px;">Section {{ version.data.chapterid.chapterid }}</li>
+{% if ((version.data.chapterid.chapterid_subid) == '0-1') %}
+          <li style="font-size:40px;padding:0 28px;">Part {{ version.data.chapterid.chapterid }} {{ version.data.chapterid.section_title }}</li>
     <div>
         {% endif %}
 
-{% if ((version.data.chapterid.chapterid_subid) == '03-00')
-    or ((version.data.chapterid.chapterid_subid) == '02')
-    or ((version.data.chapterid.chapterid_subid) == '04-00' )
-    or ((version.data.chapterid.chapterid_subid) == '05-00' )
-    or ((version.data.chapterid.chapterid_subid) == '06-00' )
-    or ((version.data.chapterid.chapterid_subid) == '07-01' )
+{% if ((version.data.chapterid.chapterid_subid) == '3-0')
+    or ((version.data.chapterid.chapterid_subid) == '2-0')
+    or ((version.data.chapterid.chapterid_subid) == '1')
+    or ((version.data.chapterid.chapterid_subid) == '4-0' )
+    or ((version.data.chapterid.chapterid_subid) == '5-0' )
+    or ((version.data.chapterid.chapterid_subid) == '6-0' )
+    or ((version.data.chapterid.chapterid_subid) == '7-0' )
     %}
 </div>
-          <li style="font-size:40px;padding:0 28px;">Section {{ version.data.chapterid.chapterid }}</li>
+          <li style="font-size:40px;padding:56px 28px 0px 28px;">Part {{ version.data.chapterid.chapterid }} {{ version.data.chapterid.section_title }}</li>
     <div>
         {% endif %}
         {% endif %}
@@ -66,5 +98,6 @@ permalink: "/chapters/"
 </div>
 </td>
 </tr>
+    </center>
 </table>
 {% include "partials/footer.njk" %}
