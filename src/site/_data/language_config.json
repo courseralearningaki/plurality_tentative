@@ -1,0 +1,44 @@
+[
+  {   "id": "en",
+      "name": "English",
+      "repo": "https://api.github.com/repos/pluralitybook/plurality/contents/contents/english",
+      "part_id_text": [
+        {
+          "id": "1",
+          "part": "Part 1"
+        },
+        {
+          "id": "2",
+          "part": "Part 2"
+        }
+      ]
+    },
+  { "id": "zh-tw",
+      "name": "Traditional Mandarin",
+      "repo": "https://api.github.com/repos/pluralitybook/plurality/contents/contents/traditional-mandarin",
+      "part_id_text": [
+        {
+          "id": "1",
+          "part": "Part 壱"
+        },
+        {
+          "id": "2",
+          "part": "Part 弐"
+        }
+      ]
+    },
+  {  "id": "ja",
+      "name": "日本語",
+      "repo": "https://api.github.com/repos/nishio/plurality-japanese/contents/contents/english",
+      "part_id_text": [
+        {
+          "id": "1",
+          "part": "一章"
+        },
+        {
+          "id": "2",
+          "part": "二章"
+        }
+      ]
+    }
+]

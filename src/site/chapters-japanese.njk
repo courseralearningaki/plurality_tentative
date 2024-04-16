@@ -2,7 +2,7 @@
 layout: home
 permalink: "/chapters-ja-jp/"
 eleventyImport:
-  collections: ["language_repo_ja"]
+  collections: ["language_repo_ja","language_repo_i18n"]
 ---
 {%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
 
@@ -21,6 +21,14 @@ eleventyImport:
     </div>
     </div>
 </div>
+<div id="language_config">language_config</div>
+{% for repo in language_repo_i18n %}
+<div>
+{{ repo.id }} / {{ repo.name }} / ({{repo.upperpart_id}}x{{repo.upperpart_text}}) / <a href="/v/parts/{{ repo.urls.id_of_part }}/{{repo.id}}" target="_blank">{{repo.urls.id_of_part}} : {{repo.urls.name_of_part}}</a>
+<! -- {{ repo.urls.name }} -/- {{ repo.urls.name.id_of_part[0] }} -->
+</div>
+{% endfor %}
+
 <table>
 <tr>
 <td valign="top">

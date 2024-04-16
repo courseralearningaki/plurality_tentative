@@ -1,0 +1,12 @@
+---
+pagination:
+    data: language_repo_i18n
+    size: 1
+    alias: lang
+permalink: "/v/parts/{{ lang.urls.id_of_part | safe }}/{{ lang.id | safe }}/"
+layout: version
+---
+{{lang.name}} is {{lang.repo}}
+<div>
+{% readdynamiccodeRender lang.urls.download_url %}
+</div>
