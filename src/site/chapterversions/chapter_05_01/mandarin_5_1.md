@@ -1,6 +1,6 @@
 ---
 title: ''
-githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/05-01-後符號交流.md'
+githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/5-1-後符號交流.md'
 dateStartedString: { day: '07', month: '01', year: '2024' }
 translations:
   {
@@ -12,7 +12,7 @@ translations:
     chapters: '章節',
   }
 language: { en: 'Mandarin/華文', iso6392B: 'zh-TW', locale: 'V 1 後符號交流' }
-chapterid: { chapterid: 5, chapterid_subid: '05-01'}
+chapterid: { chapterid: 5, chapterid_subid: '5-1'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/05-01-後符號交流.md' 'https://raw.githubusercontent.com/audreyt/plurality/main/contents/traditional-mandarin/05-01-後符號交流.md' %}
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/5-1-後符號交流.md' %}

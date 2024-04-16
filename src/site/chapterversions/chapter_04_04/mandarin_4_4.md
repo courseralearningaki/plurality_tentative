@@ -1,6 +1,6 @@
 ---
 title: ''
-githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/04-04-財產與合約.md'
+githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/4-4-財產與合約.md'
 dateStartedString: { day: '4', month: '11', year: '2023' }
 translations:
   {
@@ -12,7 +12,7 @@ translations:
     chapters: '章節',
   }
 language: { en: 'Mandarin/華文', iso6392B: 'zh-TW', locale: 'IV 4 財產與合約' }
-chapterid: { chapterid: 4, chapterid_subid: '04-04'}
+chapterid: { chapterid: 4, chapterid_subid: '4-4'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/04-04-財產與合約.md' 'https://raw.githubusercontent.com/audreyt/plurality/main/contents/traditional-mandarin/04-04-財產與合約.md' %}
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/4-4-財產與合約.md' %}

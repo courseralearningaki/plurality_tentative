@@ -20,6 +20,7 @@ html, body {
   flex-direction: column;
   position: fixed;
   overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 2;
   height: 100%;
   width: 100%;
@@ -91,14 +92,4 @@ hr {
     padding-left:96px;
     padding-bottom:96px;
   }
-}
-
-#endorse {
-  margin-left: var(--padding-step-4);
-  margin-right: var(--padding-step-4);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4vw;
-}
-#endorse > blockquote {
 }

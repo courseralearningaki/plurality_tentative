@@ -1,18 +1,18 @@
 ---
 title: ''
-githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/03-00-玉山視野.md'
+githubLink: 'https://github.com/pluralitybook/plurality/blob/main/contents/traditional-mandarin/3-0-何謂多元宇宙？.md'
 dateStartedString: { day: '14', month: '10', year: '2023' }
 translations:
   {
     plurality: 'Chapter III 0',
-    subtitle: '玉山視野',
+    subtitle: '何謂多元宇宙？',
     authorsLead: '',
-    translatorsLead: '譯者:',
+    translatorsLead: '',
     return: 'return',
     chapters: '章節',
   }
-language: { en: 'Mandarin/華文', iso6392B: 'zh-TW', locale: 'III 0 玉山視野' }
-chapterid: { chapterid: 3, chapterid_subid: '03-00'}
+language: { en: 'Mandarin/華文', iso6392B: 'zh-TW', locale: 'III 0 What is Plurality?' }
+chapterid: { chapterid: 3, chapterid_subid: '3-0'}
 translators: []
 ---
-{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/03-00-玉山視野.md' 'https://raw.githubusercontent.com/audreyt/plurality/main/contents/traditional-mandarin/03-00-玉山視野.md' %}
+{% readdynamiccode 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/3-0-何謂多元宇宙？.md' %}

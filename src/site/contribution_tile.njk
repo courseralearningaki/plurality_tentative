@@ -1,0 +1,25 @@
+---
+layout: endorsement_layout
+permalink: "/contribution_tile/"
+---
+
+
+{%- for category, items in contributor_from_file | groupby('MainContirbutionCategory') -%}
+<div id="enclosing_credit_group" style="
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 30px;
+    display: block;
+    font-family: Jost;
+    font-size: 20px;
+    border: 3px #222 solid;
+}">
+<div style="font-size:64px;text-transform: uppercase; font-family:Jost;">{{ category }}</div>
+{%- for item in items -%}
+<div style="font-size:{{ item['Font Size'] | safe }}px;font-family:Jost;">
+{{ item['RowLabels'] | safe }}
+</div>
+{%- endfor -%}
+</div>
+{%- endfor -%}
+{% include "partials/footer.njk" %}

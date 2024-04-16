@@ -3,7 +3,7 @@ layout: home
 permalink: "/"
 ---
 
-{%- for toppage in collections.toppages | sortByPageOrder -%}
+{%- for toppage in collections.toppages -%}
 {{ toppage.content | safe }}
 {%- endfor -%}
 

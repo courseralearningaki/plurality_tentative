@@ -20,11 +20,31 @@
   src: url('../fonts/lanapixel/LanaPixel.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ChenYuluoyan-ShuWei';
+  src: url('../fonts/ChenYuluoyan/ChenYuluoyan-ShuWei.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Iansui';
+  src: url('../fonts/iansui/Iansui-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/jost/Jost-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-Regular.woff') format('woff');
+}
+
 
 /* ROOT VARIABLES, FOR USE IN MODULES WHERE APPROPRIATE */
 :root {
   --primary-color: #000;
-  --secondary-color: #fff;
+  --secondary-color: #f1f1f1;
   --font-size-step-0: 100%;
   --font-size-step-1: 100%;
   --font-size-step-2: 100%;
@@ -61,9 +81,32 @@
   color: var(--primary-color);
 }
 
+#sections_subsection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto; /* Do not grow, do not shrink, and keep its size */
+}
+
+#sections_subsection > span:first-child {
+  min-width:128px;
+  display: inline-block;
+}
+#sections_subsection > span:nth-child(2) {
+  width:60%;
+  display:inline-block;
+}
+#sections_subsection > span:nth-child(3) {
+  width:200px;
+  display:inline-block;
+}
+#sections_subsection > span:nth-child(4) {
+  width:24px;
+  display:inline-block;
+}
 
 /* MOBILE HANDLING */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
   :root {
     --padding-step-1: 0.3125rem;
     --padding-step-2: 0.625rem;
@@ -71,7 +114,30 @@
     --padding-step-4: 3.125rem;
     --padding-step-5: 6.25rem;
   }
+  #sections_subsection {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #sections_subsection > span:first-child {
+    width:100%;
+    display:inline-block;
+  }
+  #sections_subsection > span:nth-child(2) {
+    width:100%;
+    display:inline-block;
+  }
+  #sections_subsection > span:nth-child(3) {
+    width:200px;
+    display:inline-block;
+  }
+  #sections_subsection > span:nth-child(4) {
+    width:24px;
+    display:inline-block;
+  }
+
 }
+
 
 #container_terminal {
   display: flex;
@@ -82,12 +148,34 @@
   display: none;
 }
 
+#chapter_container_terminal {
+
+}
+
+#chapter_container_mobile {
+  display: none;
+}
+
+#chapter_container_table {
+
+}
 
 @media screen and (max-width: 1080px) {
   #container_terminal {
     display: none;
   }
   #container_mobile {
-    display: grid;
+    display: flex;
   }
+  #chapter_container_terminal {
+    display: none;
+  }
+  #chapter_container_mobile {
+    display: inline;
+  }
+  #chapter_container_table {
+    flex-direction: column;
+    display: flex;
+  }
+
 }

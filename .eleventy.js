@@ -189,7 +189,12 @@ module.exports = function(eleventyConfig) {
     "src/site/_includes/favicons/*.png" : "assets/favicons",
     "src/site/_data/fonts/authentic-sans/*" : "assets/fonts/authentic-sans",
     "src/site/_data/fonts/lanapixel/*" : "assets/fonts/lanapixel",
+    "src/site/_data/fonts/ChenYuluoyan/*" : "assets/fonts/ChenYuluoyan",
+    "src/site/_data/fonts/iansui/*" : "assets/fonts/iansui",
+    "src/site/_data/fonts/jost/*" : "assets/fonts/jost",
+    "src/site/_data/fonts/inter/*" : "assets/fonts/inter",
   });
+
 
   eleventyConfig.addWatchTarget("_update_interval");
 
