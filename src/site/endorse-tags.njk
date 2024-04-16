@@ -1,0 +1,15 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+permalink: "tags/{{ tag }}/"
+---
+<h1>Tagged “{{ tag }}”</h1>
+
+<ol>
+{% set taglist = collections[ tag ] %}
+{% for post in taglist %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}/URL:{{ post.url }}</a>/{{ post.data.tag }}/{{ post.data.tags }}</li>
+{% endfor %}
+</ol>
