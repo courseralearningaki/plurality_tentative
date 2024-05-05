@@ -23,10 +23,21 @@ eleventyImport:
 </div>
 
 <div>
-{{ repo.id }} / {{ repo.name }} / ({{repo.upperpart_id}}x{{repo.upperpart_text}}) / <a href="/v/parts/{{ repo.urls.id_of_part }}/{{repo.id}}" target="_blank">{{repo.urls.id_of_part}} : {{repo.urls.name_of_part}}</a>
-<! -- {{ repo.urls.name }} -/- {{ repo.urls.name.id_of_part[0] }} -->
+    <div style="display:grid;float:left;padding-left:calc(var(--padding-step-4)*2);padding-right:calc(var(--padding-step-4)*2);font-size:24px;font-family:Jost;">
+    placeholder 1
+    {% readdynamiccodeRender 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/traditional-mandarin/0-3-致謝.md' %}
+    </div>
+    <div style="display:grid;float:left;padding-left:calc(var(--padding-step-4)*2);padding-right:calc(var(--padding-step-4)*2);font-size:24px;font-family:Jost;">
+    placeholder 2
+    {% readdynamiccodeRender 'https://raw.githubusercontent.com/pluralitybook/plurality/main/contents/english/0-3-credits.md' %}
+    </div>
+    <div style="display:grid;float:left;padding-left:calc(var(--padding-step-4)*2);padding-right:calc(var(--padding-step-4)*2);font-size:24px;font-family:Jost;">
+    placeholder 3
+    </div>
+    <div style="display:grid;float:left;padding-left:calc(var(--padding-step-4)*2);padding-right:calc(var(--padding-step-4)*2);font-size:24px;font-family:Jost;">
+    placeholder 4
+    </div>
 </div>
-{% endfor %}
 
 <table>
 <tr>
