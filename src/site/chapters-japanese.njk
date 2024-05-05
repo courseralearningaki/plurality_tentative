@@ -21,8 +21,7 @@ eleventyImport:
     </div>
     </div>
 </div>
-<div id="language_config">language_config</div>
-{% for repo in language_repo_i18n %}
+
 <div>
 {{ repo.id }} / {{ repo.name }} / ({{repo.upperpart_id}}x{{repo.upperpart_text}}) / <a href="/v/parts/{{ repo.urls.id_of_part }}/{{repo.id}}" target="_blank">{{repo.urls.id_of_part}} : {{repo.urls.name_of_part}}</a>
 <! -- {{ repo.urls.name }} -/- {{ repo.urls.name.id_of_part[0] }} -->
@@ -35,34 +34,27 @@ eleventyImport:
 <div id="version-menu">
   <ol id="version-ol">
     <div>
-{% for repo in language_repo_ja %}
-{% if ((repo.id_of_part) == '1') %}
-    <li style="font-size:40px;padding:0 28px;">Section {{ repo.id_of_part }}</li>
+{% for repo in language_repo_i18n %}
+{% if ((repo.id) == 'ja') %}
+{% if ((repo.upperpart_id) == '.') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">Section {{ repo.upperpart_text }}</li>
     <div>
-{% endif %}
-
-{% if  ((repo.id_of_part) == '0-0')
-    or ((repo.id_of_part) == '2-0')
-    or ((repo.id_of_part) == '3-0')
-    or ((repo.id_of_part) == '4-0' )
-    or ((repo.id_of_part) == '5-0' )
-    or ((repo.id_of_part) == '6-0' )
-    or ((repo.id_of_part) == '7-0' )
-    or ((repo.id_of_part) == '8-0' )
-    %}
-</div>
-          <li style="font-size:40px;padding:0 28px;">Section {{ repo.id_of_part }}</li>
+{% elseif ((repo.upperpart_id) != '') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">{{ repo.upperpart_text }}</li>
     <div>
 {% endif %}
 
         {{ chapterVersionMenuItemIndividualLanguage(
           githubLink = repo.githubLink,
-          pageTitle = repo.id_of_part,
-          subtitleTranslated = repo.name_of_part,
-          pageUrl = "/v/chapters/" + repo.id_of_part + "/ja",
-          language = "Japanese",
-          chapterid_subid = repo.id_of_part)
+          pageTitle = repo.urls.id_of_part,
+          subtitleTranslated = repo.urls.name_of_part,
+          pageUrl = "/v/parts/" + repo.urls.id_of_part + "/" + repo.id,
+          language = repo.name,
+          chapterid_subid = repo.urls.id_of_part)
         }}
+{% endif %}
 {% endfor %}
 
 </div>
@@ -79,4 +71,13 @@ eleventyImport:
 {% else %}
     <p>No language repository data to display</p>
 {% endif %}
+
+<div id="language_config">language_config</div>
+{% for repo in language_repo_i18n %}
+<div>
+{{ repo.id }} / {{ repo.name }} / ({{repo.upperpart_id}}x{{repo.upperpart_text}}) / <a href="/v/parts/{{ repo.urls.id_of_part }}/{{repo.id}}" target="_blank">{{repo.urls.id_of_part}} : {{repo.urls.name_of_part}}</a>
+<! -- {{ repo.urls.name }} -/- {{ repo.urls.name.id_of_part[0] }} -->
+</div>
+{% endfor %}
+
 {% include "partials/footer.njk" %}

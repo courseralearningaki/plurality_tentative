@@ -83,17 +83,28 @@ module.exports = async function () {
               }
               console.log("return parsed_json;");
               language_json[j].urls = parsed_json;
-
+              let part_heading_pushed = [];
               let pushing_line;
               for (let each_url of parsed_json){
                 pushing_line = JSON.parse(JSON.stringify(language_json[j]));
                 pushing_line.urls = each_url;
-                pushing_line.upperpart_id = "."
-                pushing_line.upperpart_text = "."
-                for ( let each_id of pushing_line.part_id_text){
-                  if ( pushing_line.urls.id_of_part[0][0] == each_id.id ){
-                    pushing_line.upperpart_id = each_id.id
-                    pushing_line.upperpart_text = each_id.part
+                pushing_line.upperpart_id = ""
+                pushing_line.upperpart_text = ""
+                if (( part_heading_pushed.indexOf(pushing_line.urls.id_of_part[0][0]) ) == -1) {
+                  // first heading
+                  pushing_line.upperpart_id = "."
+                  pushing_line.upperpart_text = pushing_line.urls.id_of_part[0][0];
+                  for ( let each_id of pushing_line.part_id_text){
+                    if (pushing_line.urls.id_of_part[0][0] == each_id.id) {
+                      if ((part_heading_pushed.indexOf(each_id.id)) == -1) {
+                        pushing_line.upperpart_id = each_id.id
+                        pushing_line.upperpart_text = each_id.part
+                        part_heading_pushed.push(each_id.id)
+                      }
+                    }
+                  }
+                  if (pushing_line.upperpart_id == "."){
+                    part_heading_pushed.push(pushing_line.urls.id_of_part[0][0])
                   }
                 }
                 language_list.push(pushing_line)
