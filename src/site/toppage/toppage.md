@@ -26,6 +26,52 @@ layout: home
                 </div>
                 </a>
             </div>
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+           <a href="./engage/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 1</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./engage_i18n/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 2</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./engage_verb_en/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 3</div>
+                        </div>
+                </div>
+            </a>
+            </div>
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+           <a href="./chapters-eng/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 4</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters-zh-tw/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 5</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters-ja-jp/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 6</div>
+                        </div>
+                </div>
+            </a>
+            </div>
         </div>
     </div>
     <div style="padding-left: 120px; padding-right: 120px; padding-top: 100px; padding-bottom: 100px; background: linear-gradient(0deg, white 0%, white 100%), radial-gradient(54.27% 60.58% at 68.06% 5.92%, #FF9B00 0%, rgba(251, 176, 59, 0) 100%), radial-gradient(55.02% 57.93% at 48.25% 65.39%, #FF3A00 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(45.26% 48.09% at 76.66% 67.16%, #0EB1D2 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(46.19% 48.89% at 91.74% 68.92%, #1DC57D 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(100.00% 100.00% at NaN% NaN%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0) 100%); border-radius: 32px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
@@ -205,7 +251,55 @@ layout: home
                         </div>
                 </div>
                 </a>
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+           <a href="./engage/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 1</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./engage_i18n/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 2</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./engage_verb_en/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 3</div>
+                        </div>
+                </div>
+            </a>
             </div>
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+           <a href="./chapters-eng/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 4</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters-zh-tw/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 5</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters-ja-jp/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 6</div>
+                        </div>
+                </div>
+            </a>
+            </div>
+
+
+</div>
         </div>
         <div style="padding-left: 20px; padding-right: 20px; padding-top: 36px; padding-bottom: 36px; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
             <div style="justify-content: flex-start; align-items: flex-start; gap: 26px; display: flex">
