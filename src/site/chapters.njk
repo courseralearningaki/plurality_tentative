@@ -4,37 +4,14 @@ permalink: "/chapters/"
 ---
 
 {%- from './_includes/macros/chapterversion-menu-item.njk' import chapterVersionMenuItem -%}
-<div id="chapter_container_mobile">
-    <div style="margin:160px 0 0 0;height:182px;min-width:122px;">
-        <center>
-        <img width="146px" height="182px" src='../assets/favicons/bookcover_small.png'>
-        </center>
-    </div>
-    <div style="margin-top:36px;">
-        <center>
-        <h2 style="font-size:48px">
-        <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
-        </h2>
-        <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
-<div style="display:inline-block;">
-    </div>
-<div>
-            <span style="font-size:14px;font-family: Jost; display: inline-block; margin-bottom: 8px">You can read our working draft on this website, or you can download it to read offline:</span><br>
-            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.pdf" class="button_small" style="margin-bottom: 3px;">English (PDF)</a></span><br>
-            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.pdf" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (PDF)</a></span><br>
-            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.epub" class="button_small" style="margin-bottom: 3px;">English (ePub)</a></span><br>
-            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.epub" class="button_small" style="margin-bottom: 3px;">Mandarin/華文 (ePub)</a></span>
-</div>
-            </center>
-    </div>
-</div>
-<div id="chapter_container_terminal">
-    <div style="margin-top:160px;
+
+    <div id="component1"
+    style="margin-top:160px;
     margin-left:calc(var(--padding-step-4)*2);margin-right:calc(var(--padding-step-4)*2);
     margin-bottom: 32px;
     /* Auto layout */
     display: flex;
-    flex-direction: column;
+    /*flex-direction: row;*/
     align-items: flex-start;
     padding-left: 64px;
     padding-bottom: 64px;
@@ -43,7 +20,7 @@ permalink: "/chapters/"
 
     gap: 16px;
 
-    width: 1118px;
+    /*width: 1118px;*/
     /*height: 443px;*/
 
     background: rgba(255, 255, 255, 0.2);
@@ -54,16 +31,17 @@ permalink: "/chapters/"
     order: 0;
     align-self: stretch;
     flex-grow: 0;">
-        <div style="/* Auto layout */
+        <div id="component1-1"
+        style="/* Auto layout */
         display: flex;
-        flex-direction: row;
+        /*flex-direction: row;*/
         justify-content: space-between;
         align-items: flex-start;
         padding: 0px;
         gap: 9px;
 
-        width: 1120px;
-        height: 315px;
+        /*width: 1120px;*/
+        /*height: 315px;*/
 
 
         /* Inside auto layout */
@@ -71,13 +49,14 @@ permalink: "/chapters/"
         order: 0;
         align-self: stretch;
         flex-grow: 0;">
-            <div style="/* Frame 2608407 */
+            <div id="component1-2"
+            style="/* Frame 2608407 */
             /* Auto layout */
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
-            padding: 112px 0px 0px;
+            padding-top: 112px;
             gap:24px;
             width: 446px;
             height: 179px;
@@ -111,7 +90,7 @@ permalink: "/chapters/"
             flex-grow: 0;
             ">
         <h2 style="font-size:48px;width:500px;margin-block-start:0px;">
-        <span>⿻ 數位</span><span style="color:red">P</span><span style="color:orange">L</span><span style="color:green">U</span><span style="color:#1e90ff">R</span><span style="color:white">A</span><span style="color:#1e90ff">L</span><span style="color:green">I</span><span style="color:orange">T</span><span style="color:red">Y</span>
+        <span>⿻</span><span style="font-family: Iansui">數位</span><span style="color:red">P</span><span style="color:orange">L</span><span style="color:green">U</span><span style="color:#1e90ff">R</span><span style="color:white">A</span><span style="color:#1e90ff">L</span><span style="color:green">I</span><span style="color:orange">T</span><span style="color:red">Y</span>
         </h2>
             </div>
             <div style="width: 100%; color: white; font-size: 24px; font-family: Jost; font-weight: 400; word-wrap: break-word">The Future of Collaborative Technology and Democracy</div>
@@ -139,9 +118,9 @@ permalink: "/chapters/"
                 </div>
             </div>
             </div>
-            <div style="
-            /*width: 100%;*/
-            width: 560px;
+            <div id="component1-video"
+            style="
+            /*width: 560px;*/
             height: 100%; position: relative; background: #040404">
 
 <iframe
@@ -157,29 +136,8 @@ permalink: "/chapters/"
         </div>
     </div>
 
-
-<!--    <div style="-->
-<!--    margin-left:calc(var(&#45;&#45;padding-step-4)*2);margin-right:calc(var(&#45;&#45;padding-step-4)*2);-->
-<!--    /* Auto layout */-->
-<!--    display: flex;-->
-<!--    flex-direction: column;-->
-<!--    align-items: flex-start;-->
-<!--    padding: 64px;-->
-<!--    gap: 16px;-->
-
-<!--    width: 1248px;-->
-<!--    /*height: 443px;*/-->
-
-<!--    background: rgba(255, 255, 255, 0.2);-->
-<!--    border-radius: 32px;-->
-
-<!--    /* Inside auto layout */-->
-<!--    flex: none;-->
-<!--    order: 0;-->
-<!--    align-self: stretch;-->
-<!--    flex-grow: 0;">-->
-
-        <div style="/* Auto layout */
+        <div
+        style="/* Auto layout */
         margin-left:calc(var(--padding-step-4)*2);margin-right:calc(var(--padding-step-4)*2);
 
         display: inline-flex;
@@ -200,10 +158,10 @@ permalink: "/chapters/"
         flex-grow: 0;">
 
 
-<div style="width: 100%; height: 100%; justify-content: space-between; align-items: flex-start; display: inline-flex">
-    <div style="width: 612px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+<div id="component2" style="gap: 24px; width: 100%; height: 100%; justify-content: space-between; align-items: flex-start; display: inline-flex">
+    <div id="component2-1" style="width: 612px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
         <div style="height: 132px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-            <div style="width:484px;height: 132px; padding: 32px; background:
+            <div id="component2-1-1" style="height: 132px; padding: 32px; background:
             /*linear-gradient(0deg, white 0%, white 100%),*/
              linear-gradient(0deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,.2) 100%),
              radial-gradient(54.27% 60.58% at 68.06% 5.92%, #FF9B00 0%, rgba(251, 176, 59, 0) 100%),
@@ -220,9 +178,6 @@ permalink: "/chapters/"
                 </div>
             </div>
         </div>
-
-
-
   <style>
 
   /* info-box setup */
@@ -298,14 +253,7 @@ permalink: "/chapters/"
 </style>
 
         <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-            <div style="width: 484px; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-<!--                <div style="width: 150px; height: 25px; padding-left: 10px; padding-right: 10px; background: white; border-radius: 4px; border: 1px #DDDDE3 solid; justify-content: flex-start; align-items: center; gap: 5px; display: inline-flex">-->
-<!--                    <div style="width: 15px; height: 15px; position: relative; background: rgba(255, 255, 255, 0)">-->
-<!--                        <div style="width: 13.20px; height: 13.20px; left: 0.90px; top: 0.90px; position: absolute; background: #60646C"></div>-->
-<!--                        <div style="width: 12px; height: 0.80px; left: 1.50px; top: 7.10px; position: absolute; background: #1C2024"></div>-->
-<!--                        <div style="width: 7.08px; height: 12.51px; left: 4px; top: 1.24px; position: absolute; background: #1C2024"></div>-->
-<!--                        <div style="width: 12.10px; height: 6.89px; left: 1.45px; top: 3.96px; position: absolute; background: #1C2024"></div>-->
-<!--                    </div>-->
+            <div id="component2-1-2" style="padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
 <section class="info-box">
 <select id="book-language-select" style="width:192px;font-family: Jost; margin-bottom: 4px; margin-top: 4px;">
   <option value="">&#x1F310 Choose a language</option>
@@ -351,7 +299,7 @@ permalink: "/chapters/"
     </div>
 
 
-    <div style="width: 613px; align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+    <div id="component2-2" style="width: 613px; align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
         <div style="align-self: stretch; height: 172px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
             <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
                 <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
@@ -390,8 +338,6 @@ Before you download, please consider donating $4 or more to help us maintain thi
 
 </div>
 
-</div>
-
 <script>
 let urlParameters = new Map(window.location.search.slice(1).split('&').map(param => param.split('=')))
 
@@ -424,24 +370,81 @@ setMode(urlParameters);
 function setMode(urlParameters) {
   let languageSelected;
 
-  if (urlParameters) {
+  if (urlParameters[0]) {
       languageSelected = urlParameters.get("lang");
-      for(let i = 1; i < tabs[0].length; i++) {
-        if( tabs[0][i].value == languageSelected ) {
-            panels[i-1].setAttribute('aria-hidden', 'false');
-            panels[i-1].setAttribute('class', 'active-panel');
-            options[i].selected = true;
-        } else {
-            panels[i-1].setAttribute('aria-hidden', 'true');
-            panels[i-1].classList.remove("active-panel")
-            options[i].selected = false;
-        }
-
+  } else {
+      languageSelected = "en";
+  }
+  for(let i = 1; i < tabs[0].length; i++) {
+      if (tabs[0][i].value == languageSelected) {
+          panels[i - 1].setAttribute('aria-hidden', 'false');
+          panels[i - 1].setAttribute('class', 'active-panel');
+          options[i].selected = true;
+      } else {
+          panels[i - 1].setAttribute('aria-hidden', 'true');
+          panels[i - 1].classList.remove("active-panel")
+          options[i].selected = false;
       }
 
   }
 }
 </script>
+
+<style>
+#component1-1 {
+width:1118px;
+flex-direction: row;
+}
+#component1-2 {
+    padding-bottom: 64px;
+}
+#component1 {
+width: 1118px;
+flex-direction: row;
+}
+#component1-video {
+    width:560px;
+}
+#component2-1-1 {
+    width: 484px;
+}
+#component2-1-2 {
+    width: 484px;
+}
+/* For screens wider than 600px, change the flex direction to row */
+@media screen and (max-width: 1200px) {
+
+    #component1-1 {
+        display: flex;
+        flex-direction: column;
+        width:550px;
+    }
+    #component1-video {
+        width:560px;
+    }
+    #component1 {
+        order: 2;
+        width: 550px;
+        flex-direction: column;
+    }
+    #component2 {
+        flex-direction: column;
+    }
+    #component2-1 {
+        order: 2;
+    }
+    #component2-1-1 {
+        width: 612px;
+    }
+    #component2-1-2 {
+        width: 612px;
+    }
+    #component2-2 {
+        order: 1;
+    }
+
+}
+</style>
 
 
 <table id="chapter_container_table">
