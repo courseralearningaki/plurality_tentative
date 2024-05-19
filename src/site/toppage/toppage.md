@@ -21,7 +21,7 @@ layout: home
                 <a href="./chapters/">
                 <div style="padding-left: 24px; padding-right: 24px; padding-top: 16px; padding-bottom: 16px; background: white; border-radius: 8px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                         <div style=" justify-content: center;width: 176px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 24px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Read online</div>
+                            <div style="text-align: center; color: #222222; font-size: 24px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Enjoy</div>
                         </div>
                 </div>
                 </a>
@@ -247,7 +247,7 @@ layout: home
                 <a href="./chapters/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                         <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Read online</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Enjoy</div>
                         </div>
                 </div>
                 </a>
