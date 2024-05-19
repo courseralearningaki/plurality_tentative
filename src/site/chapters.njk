@@ -55,11 +55,11 @@ permalink: "/chapters/"
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            align-items: flex-start;
-            padding-top: 112px;
+            /*align-items: flex-start;*/
+            /*padding-top: 112px;*/
             gap:24px;
-            width: 446px;
-            height: 179px;
+            /*width: 446px;*/
+            /*height: 179px;*/
             /*height: 48px;*/
 
             /* Inside auto layout */
@@ -68,9 +68,10 @@ permalink: "/chapters/"
             align-self: stretch;
             flex-grow: 0;
             ">
-            <div style="/* PLURALITY */
+            <div id="component_plurality"
+            style="/* PLURALITY */
 
-            width: 255px;
+            /*width: 255px;*/
             height: 61px;
 
             font-family: 'LanaPixel';
@@ -78,20 +79,19 @@ permalink: "/chapters/"
             font-weight: 400;
             font-size: 48px;
             line-height: 61px;
-            text-align: left;
+            /*text-align: left;*/
             letter-spacing: 0.15em;
-
+            display: contents;
             color: #C6533D;
-
 
             /* Inside auto layout */
             flex: none;
             order: 0;
             flex-grow: 0;
             ">
-        <h2 style="font-size:48px;width:500px;margin-block-start:0px;">
-        <span>⿻</span><span style="font-family: Iansui">數位</span><span style="color:red">P</span><span style="color:orange">L</span><span style="color:green">U</span><span style="color:#1e90ff">R</span><span style="color:white">A</span><span style="color:#1e90ff">L</span><span style="color:green">I</span><span style="color:orange">T</span><span style="color:red">Y</span>
-        </h2>
+        <span style="font-size:48px;margin-block-start:0px;">
+        <span id="ideographic_digital" style="font-family: Iansui">⿻數位</span><span style="color:red">P</span><span style="color:orange">L</span><span style="color:green">U</span><span style="color:#1e90ff">R</span><span style="color:white">A</span><span style="color:#1e90ff">L</span><span style="color:green">I</span><span style="color:orange">T</span><span style="color:red">Y</span>
+        </span>
             </div>
             <div style="width: 100%; color: white; font-size: 24px; font-family: Jost; font-weight: 400; word-wrap: break-word">The Future of Collaborative Technology and Democracy</div>
             <div style="width: 100%; color: white; font-size: 16px; font-family: Jost; font-weight: 400; word-wrap: break-word">To maintain our project, please either buy a copy or download and donate.</div>
@@ -99,8 +99,8 @@ permalink: "/chapters/"
                 <div style="
                 /*padding-left: 12px;*/
                  padding-right: 12px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
-                    <div style="width: 236px; position: relative">
-                        <a href="">
+                    <div style="position: relative">
+                        <a target="_blank" href="https://amzn.to/3K4UDvO">
                         <div class="button_small" style="width: 128px;
                          /*height: 32px;*/
                           padding-top: 5px; padding-bottom: 5px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex">
@@ -124,9 +124,9 @@ permalink: "/chapters/"
             height: 100%; position: relative; background: #040404">
 
 <iframe
-            src="https://www.youtube.com/embed/pxJm3eGrC7s?si=jKb2ecniP00ChhA_"
+            src="https://www.youtube.com/embed/L_AAhYk6I3M?si=jKb2ecniP00ChhA_"
             title="YouTube video player"
-            width="560px"
+            width="100%"
             height="315px"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -136,7 +136,7 @@ permalink: "/chapters/"
         </div>
     </div>
 
-        <div
+        <div id="component2-top"
         style="/* Auto layout */
         margin-left:calc(var(--padding-step-4)*2);margin-right:calc(var(--padding-step-4)*2);
 
@@ -147,7 +147,7 @@ permalink: "/chapters/"
         padding: 0px;
         gap: 9px;
 
-        width: 1248px;
+        /*width: 1248px;*/
         /*height: 315px;*/
 
 
@@ -159,7 +159,9 @@ permalink: "/chapters/"
 
 
 <div id="component2" style="gap: 24px; width: 100%; height: 100%; justify-content: space-between; align-items: flex-start; display: inline-flex">
-    <div id="component2-1" style="width: 612px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
+    <div id="component2-1" style="flex-direction: column; justify-content: flex-start;
+     /*align-items: flex-start;*/
+      gap: 24px; display: inline-flex">
         <div style="height: 132px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
             <div id="component2-1-1" style="height: 132px; padding: 32px; background:
             /*linear-gradient(0deg, white 0%, white 100%),*/
@@ -188,6 +190,7 @@ permalink: "/chapters/"
     /*margin-top:26px;*/
     margin-bottom:200px;
     height: 100px;
+    width:100%;
   }
 
   /* styling info-box tabs */
@@ -200,7 +203,7 @@ permalink: "/chapters/"
   li[role="tab"] {
     float: left;
     list-style-type: none;
-    width: 150px;
+    /*width: 150px;*/
     display: inline-block;
     line-height: 3;
     background-color: rgba(255,255,255,0.20);
@@ -224,6 +227,7 @@ permalink: "/chapters/"
     clear: both;
     position: relative;
     height: auto;
+    width:auto;
   }
 
   .info-box article {
@@ -262,7 +266,7 @@ permalink: "/chapters/"
   <option value="ja">&#x1F310 日本語</option>
 </select>
 
-<div class="panels" style="width:512px;margin-top:24px;">
+<div class="panels" style="width:100%; margin-top:24px;">
     <article class="active-panel" role="tabpanel" aria-hidden="false">
 <div style="margin-bottom: 24px">
     <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-english.pdf" class="button_small" style="margin-bottom: 3px;width:92px;">PDF</a></span>
@@ -299,8 +303,8 @@ permalink: "/chapters/"
     </div>
 
 
-    <div id="component2-2" style="width: 613px; align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
-        <div style="align-self: stretch; height: 172px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
+    <div id="component2-2" style="align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+        <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
             <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
                 <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
                     <div style="color: white; font-size: 32px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">YOUR DONATION MEANS OTHERS CAN ENJOY!</div>
@@ -391,12 +395,17 @@ function setMode(urlParameters) {
 </script>
 
 <style>
+.panels {
+    width:512px;
+}
 #component1-1 {
 width:1118px;
 flex-direction: row;
 }
 #component1-2 {
     padding-bottom: 64px;
+    align-items:flex-start;
+    width:446px;
 }
 #component1 {
 width: 1118px;
@@ -411,36 +420,66 @@ flex-direction: row;
 #component2-1-2 {
     width: 484px;
 }
+#component2-top {
+    width: 1248px;
+}
+#component2-1 {
+    width: 612px;
+}
+#component2-2 {
+    width: 612px;
+}
+
 /* For screens wider than 600px, change the flex direction to row */
 @media screen and (max-width: 1200px) {
-
+    .panels {
+        width:100%;
+    }
+    #component_plurality {
+        text-align: center;
+    }
+    #ideographic_digital {
+        display: none;
+    }
     #component1-1 {
         display: flex;
         flex-direction: column;
-        width:550px;
+        width:100%;
+    }
+    #component1-2 {
+        width:100%;
+        align-items:center;
     }
     #component1-video {
-        width:560px;
+        width:95%;
     }
     #component1 {
         order: 2;
-        width: 550px;
+        width: 63%;
         flex-direction: column;
+        text-align:center;
+        align-content: center;
     }
     #component2 {
+        width: 100%;
         flex-direction: column;
     }
     #component2-1 {
+        width: 100%;
         order: 2;
     }
     #component2-1-1 {
-        width: 612px;
+        width: 100%;
     }
     #component2-1-2 {
-        width: 612px;
+        width: 100%;
     }
     #component2-2 {
         order: 1;
+        width: 100%;
+    }
+    #component2-top {
+        width: 70%;
     }
 
 }
