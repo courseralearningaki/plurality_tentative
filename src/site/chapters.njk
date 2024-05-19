@@ -7,7 +7,6 @@ permalink: "/chapters/"
 
     <div id="component1"
     style="margin-top:160px;
-    margin-left:calc(var(--padding-step-4)*2);margin-right:calc(var(--padding-step-4)*2);
     margin-bottom: 32px;
     /* Auto layout */
     display: flex;
@@ -138,8 +137,6 @@ permalink: "/chapters/"
 
         <div id="component2-top"
         style="/* Auto layout */
-        margin-left:calc(var(--padding-step-4)*2);margin-right:calc(var(--padding-step-4)*2);
-
         display: inline-flex;
         flex-direction: row;
         justify-content: space-between;
@@ -292,7 +289,7 @@ permalink: "/chapters/"
             <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">
 日本語版は機械翻訳をベースとしたものがScrapboxを用いたフォーラムで読むことができます。日本語話者にとってわかりやすくするための補足や用語解説、訳語選択の議論も行われています。
             </span><br>
-            <span style="text-transform: none;"><a target="_blank" href="https://scrapbox.io/plurality-japanese/%E5%88%9D%E3%82%81%E3%81%AB%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AD" class="button_small" style="margin-bottom: 3px; width: 348px;">Japanese/日本語 (Scrapbox)</a></span>
+            <span style="text-transform: none;display: inline-block; "><a target="_blank" href="https://scrapbox.io/plurality-japanese/%E5%88%9D%E3%82%81%E3%81%AB%E8%AA%AD%E3%82%93%E3%81%A7%E3%81%AD" class="button_small" style="margin-bottom: 3px; width: 70%;">Japanese/日本語 (Scrapbox)</a></span>
         </div>
     </article>
   </div>
@@ -303,9 +300,9 @@ permalink: "/chapters/"
     </div>
 
 
-    <div id="component2-2" style="align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+    <div id="component2-2" style="align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; align-items: flex-start; display: inline-flex">
         <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-            <div style="align-self: stretch; height: 64px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
+            <div style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
                 <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex">
                     <div style="color: white; font-size: 32px; font-family: LanaPixel; font-weight: 400; text-transform: uppercase; word-wrap: break-word">YOUR DONATION MEANS OTHERS CAN ENJOY!</div>
                 </div>
@@ -318,7 +315,7 @@ Before you download, please consider donating $4 or more to help us maintain thi
                 <div style="width: 41px; position: relative">
 <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3Q6BS9ZA595ZS">
                     <div class="button_small" style="width: 41px;
-                     /*height: 32px;*/
+                     height: 32px;
                      padding-top: 5px; padding-bottom: 5px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex">
                         <div style="text-align: center; color: black; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">PayPal</div>
                     </div>
@@ -329,7 +326,7 @@ Before you download, please consider donating $4 or more to help us maintain thi
                 <div style="width: 58px; position: relative">
 <a target="_blank" href="https://commerce.coinbase.com/checkout/aab4f708-439b-47ac-a68b-adf0613747bd">
                     <div class="button_small" style="width: 58px;
-                     /*height: 32px;*/
+                     height: 32px;
                      padding-top: 5px; padding-bottom: 5px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: center; gap: 6px; display: inline-flex">
                         <div style="text-align: center; color: black; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Coinbase</div>
                     </div>
@@ -410,6 +407,9 @@ flex-direction: row;
 #component1 {
 width: 1118px;
 flex-direction: row;
+margin-left:calc(var(--padding-step-4)*2);
+margin-right:calc(var(--padding-step-4)*2);
+
 }
 #component1-video {
     width:560px;
@@ -422,6 +422,8 @@ flex-direction: row;
 }
 #component2-top {
     width: 1248px;
+    margin-left:calc(var(--padding-step-4)*2);
+    margin-right:calc(var(--padding-step-4)*2);
 }
 #component2-1 {
     width: 612px;
@@ -431,7 +433,7 @@ flex-direction: row;
 }
 
 /* For screens wider than 600px, change the flex direction to row */
-@media screen and (max-width: 1200px) {
+@media all and (max-width: 1200px) {
     .panels {
         width:100%;
     }
@@ -459,6 +461,8 @@ flex-direction: row;
         flex-direction: column;
         text-align:center;
         align-content: center;
+        margin-left:calc(var(--padding-step-4));
+        margin-right:calc(var(--padding-step-4));
     }
     #component2 {
         width: 100%;
@@ -480,6 +484,8 @@ flex-direction: row;
     }
     #component2-top {
         width: 70%;
+        margin-left:calc(var(--padding-step-4));
+        margin-right:calc(var(--padding-step-4));
     }
 
 }
