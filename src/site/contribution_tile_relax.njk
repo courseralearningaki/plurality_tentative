@@ -1,0 +1,65 @@
+---
+layout: home
+permalink: "/contribution_no_layout/"
+---
+<style>
+    #contribute_box {
+        grid-template-columns: repeat(2,1fr);
+        display:grid;
+        gap:36px;
+        margin-left: var(--padding-step-4);
+        margin-right: var(--padding-step-4);
+    }
+
+/* MOBILE HANDLING */
+@media screen and (max-width: 1280px) {
+    #contribute_box {
+        grid-template-columns: repeat(1,1fr);
+        display:grid;
+        gap:36px;
+        margin-left: var(--padding-step-4);
+        margin-right: var(--padding-step-4);
+    }
+}
+</style>
+<div style="padding-top: 64px;
+        padding-bottom: 32px;
+        margin-left: var(--padding-step-4);
+        margin-right: var(--padding-step-4);
+        font-family: Jost;
+        font-size: 48px;
+">
+Contribution
+</div>
+<div id="contribute_box">
+{%- for category, items in contributor_from_file | groupby('MainContirbutionCategory') -%}
+<div id="enclosing_credit_group" style="
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 30px;
+    display: block;
+    font-family: Jost;
+    font-size: 20px;
+    border: 3px #222 solid;
+}">
+    <blockquote style="
+        display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    unicode-bidi: isolate;">
+        <p>
+<span style="font-size:64px;text-transform: uppercase; font-family:Jost;">{{ category }}</span><br>
+{%- for item in items -%}
+<span style="font-size:{{ item['Font Size'] | safe }}px;font-family:Jost;">
+{{ item['RowLabels'] | safe }}
+</span>
+            <br>
+{%- endfor -%}
+        </p>
+    </blockquote>
+</div>
+    {%- endfor -%}
+</div>
+{% include "partials/footer.njk" %}
