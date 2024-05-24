@@ -36,12 +36,13 @@ module.exports = function(eleventyConfig) {
     const shortcodeFetch = (url,fallback_url) => {
       try {
         let returnedContent = EleventyFetch(url, {
-          duration: '1m',
+          duration: '1h',
           type: 'text',
           verbose: true
         }).then(
          function(response){
            let text = renderTemplateInside(response,'md');
+           text = text.replaceAll("⿻","⿻<span style=\"font-size:0px;\">plurality</span>");
            console.log("post:",text)
            return text;
          }
@@ -70,11 +71,12 @@ module.exports = function(eleventyConfig) {
     const shortcodeFetch = (url,fallback_url) => {
       try {
         let returnedContent = EleventyFetch(url, {
-          duration: '1m',
+          duration: '1h',
           type: 'text',
           verbose: true
         }).then(
          function(response){
+          response = response.replaceAll("⿻","⿻<span style=\"font-size:0px;\">plurality</span>");
            return response;
          }
         ).catch(error => {
