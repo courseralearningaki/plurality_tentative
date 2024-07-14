@@ -40,5 +40,19 @@
           "part": "二章"
         }
       ]
+    },
+  {  "id": "tha",
+      "name": "ไทย",
+      "repo": "https://api.github.com/repos/chusanap/plurality-thai/contents/contents/thai",
+      "part_id_text": [
+        {
+          "id": "1",
+          "part": "一章"
+        },
+        {
+          "id": "2",
+          "part": "二章"
+        }
+      ]
     }
 ]

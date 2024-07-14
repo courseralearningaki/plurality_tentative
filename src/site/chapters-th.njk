@@ -1,0 +1,71 @@
+---
+layout: home
+permalink: "/chapters/tha/"
+eleventyImport:
+  collections: ["language_repo_i18n"]
+---
+{%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
+
+<div>
+    <div style="display:grid;float:left;margin:160px 0 0 96px;height:182px; width:122px;min-width:122px;">
+        <center>
+        <img width="121px" height="182px" src='../../assets/favicons/bookcover_small.png'>
+        </center>
+    </div>
+    <div style="display:grid;float:left;margin:196px 0 0 64px;height:182px; width:600px;min-width:500px;">
+        <h2 style="font-size:48px">
+        <span style="color:red">P </span><span style="color:orange">L </span><span style="color:green">U </span><span style="color:#1e90ff">R </span><span style="color:white">A </span><span style="color:#1e90ff">L </span><span style="color:green">I </span><span style="color:orange">T </span><span style="color:red">Y</span>
+        </h2>
+        <H2 style="font-size:24px;font-family: Jost;">The Future of Collaborative Technology and Democracy</H2>
+<div style="display:inline-block;">
+    </div>
+    </div>
+</div>
+
+<div>
+
+<div style="padding-left:calc(var(--padding-step-4)*2);padding-right:calc(var(--padding-step-4)*2);">
+    <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">How do you like to experience the Plurality book.<br>
+Choose a way to immerse yourself in the book.</span><br>
+    <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">(Link to) Audiobook via ACX</span><br>
+    <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">(Link to) Audibook on website</span><br>
+    <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">(Link to) Purchase physical copy via Amazon</span><br>
+</div>
+
+</div>
+
+<table>
+<tr>
+<td valign="top">
+<div id="version-menu">
+  <ol id="version-ol">
+    <div>
+{% for repo in language_repo_i18n %}
+{% if ((repo.id) == 'tha') %}
+{% if ((repo.upperpart_id) == '.') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">Section {{ repo.upperpart_text }}</li>
+    <div>
+{% elseif ((repo.upperpart_id) != '') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">{{ repo.upperpart_text }}</li>
+    <div>
+{% endif %}
+
+        {{ chapterVersionMenuItemIndividualLanguage(
+          githubLink = repo.githubLink,
+          pageTitle = repo.urls.id_of_part,
+          subtitleTranslated = repo.urls.name_of_part,
+          pageUrl = "/v/parts/" + repo.urls.id_of_part + "/" + repo.id,
+          language = repo.name,
+          chapterid_subid = repo.urls.id_of_part)
+        }}
+{% endif %}
+{% endfor %}
+
+</div>
+</td>
+</tr>
+</table>
+
+{% include "partials/footer.njk" %}
