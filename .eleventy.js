@@ -42,7 +42,7 @@ module.exports = function(eleventyConfig) {
         }).then(
          function(response){
            let text = renderTemplateInside(response,'md');
-           text = text.replaceAll("⿻","⿻<span style=\"font-size:0px;\">plurality</span>");
+           // text = text.replaceAll("⿻","⿻<span style=\"font-size:0px;\">plurality</span>");
            console.log("post:",text)
            return text;
          }
