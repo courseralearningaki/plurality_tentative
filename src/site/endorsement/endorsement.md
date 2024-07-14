@@ -2,7 +2,7 @@
 title: 'Endorsement test'
 githubLink:
 dateStartedString: { day: '10', month: '01', year: '2024' }
-language: { en: 'english', iso6392B: 'eng', locale: 'english' }
+language: { en: 'english', iso6392B: 'eng-1', locale: 'english' }
 chapterid: { chapterid: endorsement, chapterid_subid: 'endorsement'}
 translators: []
 layout: endorsement
