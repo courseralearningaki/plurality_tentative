@@ -1,11 +1,11 @@
 ---
 layout: home
-permalink: "/chapters/tha/"
+permalink: "/chapters/tha-2/"
 eleventyImport:
   collections: ["language_repo_i18n"]
 ---
 {%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
-{% include "partials/global-content.njk" %}
+{% include "partials/global-content_without_locals.njk" %}
 <div style="padding-top: 16px;">
 <div id="component2-top" style="align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; align-items: flex-start; display: inline-flex">
             <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">Localized content</span><br>
@@ -16,6 +16,7 @@ eleventyImport:
             <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">選擇一個數位版本的下載格式，點擊按鈕以進行下載</span><br>
 </div>
 </div>
+
 <table>
 <tr>
 <td valign="top">
