@@ -104,8 +104,14 @@ if __name__ == '__main__':
                 for before, after in segments:
                     segment_before_found = False
                     print(f"\n{before:40} | {after:40}",end="")
-                    if before in text_data:
+                    if before == "":
+                        print("Start at 0",end="")
+                    elif before in text_data:
                         # print("before found",end="")
+                        all_found = [[m.span()[0], m.span()[1]] for m in re.finditer(before+"\s*(\w*)",text_data)]
+                        all_latter_words = [m for m in re.findall(before + "\s*(\w*)", text_data)]
+                        if len(all_found) != 0:
+                            print(all_found,all_latter_words[0],end="")
                         segment_before_found = True
                     else:
                         before = before.translate(str.maketrans({" ":"\s*"}))
@@ -118,6 +124,12 @@ if __name__ == '__main__':
                     if after in text_data:
                         # print("after found",end="")
                         segment_after_found = True
+                        if segment_before_found == False:
+                            all_found = [[m.span()[0], m.span()[1]] for m in re.finditer("(\w*)\s*"+after,text_data)]
+                            all_latter_words = [m for m in re.findall("(\w*)\s*"+after, text_data)]
+                            if len(all_found) != 0:
+                                print("afterfound:",all_found,all_latter_words[0],end="")
+
                     else:
                         # re.escape
                         after = after.translate(str.maketrans({" ":"\s*"}))
@@ -138,5 +150,5 @@ if __name__ == '__main__':
                     print(f"[{before_found_string}/{after_found_string}]",end="")
                     if (segment_before_found == False or segment_after_found == False):
                         print(f"--partly NOT found",end="")
-                    if (segment_before_found == False or segment_after_found == False):
+                    if (segment_before_found == False and segment_after_found == False):
                         print(f"-------------------ENTIRELY NOT found", end="")
