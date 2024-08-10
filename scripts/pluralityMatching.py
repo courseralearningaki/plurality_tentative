@@ -4,7 +4,7 @@ import os
 import re
 from tokenize import tokenize, STRING, NAME, OP
 from io import BytesIO
-
+import pandas as pd
 def find_segments_with_separator(in_string, separator="⿻"):
 
     # pattern = re.compile(rf"(\b\w+\b \b\w+\b){separator}(\b\w+\b \b\w+\b)")
@@ -68,6 +68,14 @@ def remove_non_alphabet_and_make_uppercase(in_string):
 
 if __name__ == '__main__':
 
+    df_columns = [  'section', 'before', 'after', 'segment_before_found', 'segment_after_found',
+                    "before_found_string", "after_found_string",
+                    'all_found_before', 'all_latter_words_before' , 'found_before',
+                    'all_found_after', 'all_latter_words_after', 'found_after'
+                    'found_regex_before','found_regex_after',
+                  ]
+    df_word_use_index = pd.DataFrame(columns=df_columns)
+
 
     folder_all = "chapters"
     files = os.listdir(folder_all)
@@ -103,15 +111,31 @@ if __name__ == '__main__':
 
                 for before, after in segments:
                     segment_before_found = False
+                    segment_after_found = False
+
+                    before_text = before
+                    after_text = after
+
+                    all_found_before = []
+                    all_latter_words_before = []
+                    found_before = []
+
+                    all_found_after = []
+                    all_latter_words_after = []
+                    found_after = []
+
+                    found_regex_before = False
+                    found_regex_after = False
+
                     print(f"\n{before:40} | {after:40}",end="")
                     if before == "":
                         print("Start at 0",end="")
                     elif before in text_data:
                         # print("before found",end="")
-                        all_found = [[m.span()[0], m.span()[1]] for m in re.finditer(before+"\s*(\w*)",text_data)]
-                        all_latter_words = [m for m in re.findall(before + "\s*(\w*)", text_data)]
-                        if len(all_found) != 0:
-                            print(all_found,all_latter_words[0],end="")
+                        all_found_before = [[m.span()[0], m.span()[1]] for m in re.finditer(before+"\s*(\w*)",text_data)]
+                        all_latter_words_before = [m for m in re.findall(before + "\s*(\w*)", text_data)]
+                        if len(all_found_before) != 0:
+                            print(all_found_before,all_latter_words_before[0],end="")
                         segment_before_found = True
                     else:
                         before = before.translate(str.maketrans({" ":"\s*"}))
@@ -119,16 +143,16 @@ if __name__ == '__main__':
                         if len(found_before) != 0:
                             print("before found (regex)", end="")
                             segment_before_found = True
+                            found_regex_before = True
 
-                    segment_after_found = False
                     if after in text_data:
                         # print("after found",end="")
                         segment_after_found = True
                         if segment_before_found == False:
-                            all_found = [[m.span()[0], m.span()[1]] for m in re.finditer("(\w*)\s*"+after,text_data)]
-                            all_latter_words = [m for m in re.findall("(\w*)\s*"+after, text_data)]
-                            if len(all_found) != 0:
-                                print("afterfound:",all_found,all_latter_words[0],end="")
+                            all_found_after = [[m.span()[0], m.span()[1]] for m in re.finditer("(\w*)\s*"+after,text_data)]
+                            all_latter_words_after = [m for m in re.findall("(\w*)\s*"+after, text_data)]
+                            if len(all_found_after) != 0:
+                                print("afterfound:",all_found_after,all_latter_words_after[0],end="")
 
                     else:
                         # re.escape
@@ -137,6 +161,7 @@ if __name__ == '__main__':
                         if len(found_after) != 0:
                             # print("after found (regex)", end="")
                             segment_after_found = True
+                            found_regex_after = True
 
                     if (segment_before_found):
                         before_found_string = "X"
@@ -152,3 +177,28 @@ if __name__ == '__main__':
                         print(f"--partly NOT found",end="")
                     if (segment_before_found == False and segment_after_found == False):
                         print(f"-------------------ENTIRELY NOT found", end="")
+
+                    tmp_se = pd.Series({
+
+                        'section': chapter_id[0],
+                        'before':before_text,
+                        'after':after_text
+                        , 'segment_before_found':segment_before_found,
+                        'segment_after_found':segment_after_found,
+                        "before_found_string":before_found_string ,
+                        "after_found_string": after_found_string,
+                        'all_found_before':all_found_before,
+                        'all_latter_words_before':all_latter_words_before,
+                        'found_before':found_before,
+                        'all_found_after':found_after,
+                        'all_latter_words_after': all_latter_words_after,
+                        'found_after': found_after,
+                        'found_regex_before':found_regex_before,
+                        'found_regex_after':found_regex_after,
+
+                    }, index=df_word_use_index.columns)
+                    df_word_use_index = pd.concat([df_word_use_index, tmp_se.to_frame().T], ignore_index=True)
+                    # df_word_use_index = df_word_use_index.append(tmp_se, ignore_index=True)
+
+df_word_use_index.to_csv(os.path.join("mapping.txt"), index=False,sep="\t")
+print("all comparison completed")
