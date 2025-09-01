@@ -9,7 +9,7 @@ ISRは、ユーザーがリアルタイムで交流できるような共有バ�
 だがこうしたプラットフォームは娯楽の提供にとどまらず、文化、距離を超えた共通の理解と共感の場を作り出し、遠く離れた人々の間に感情的なつながりと認識を生み出す。たとえば言語学習アプリは、ユーザーが他人の言語や文化に入り込めるようにしてくれるし、VRセラピーは、精神面の課題を抱えた人々にセラピーと安心を提供できる。どの例も、ISRが娯楽ともっと深い社会的つながりをどのように組み合わせることができるかのユニークな側面を示している。こうした技術が成熟すれば、現実をシミュレートするだけでなく、それを補い、文化の橋渡しを行い、グローバルコミュニティの間に出自や言語を問わない共通体験や相互理解を促進できる。
 
 <figure>
-<img src="https://raw.githubusercontent.com/pluralitybook/plurality/main/figs/mediatedreality.png" width="100%" alt='Venn diagram with four overlapping circles labeled "Virtual Reality", "Augmented Reality", "Mixed Reality," and "Modulated Reality." A larger circle encompasses these, labeled "Mediated Reality."'>
+<img src="https://raw.githubusercontent.com/akinorioyama/plurality/main/figs/japanese/5-2-A.jpg" width="100%" alt='Venn diagram with four overlapping circles labeled "Virtual Reality", "Augmented Reality", "Mixed Reality," and "Modulated Reality." A larger circle encompasses these, labeled "Mediated Reality."'>
 
 **<figcaption>図 5-2-A 媒介現実のフレームワーク、Mann and Nnlf （1994）に基づく</figcaption>**
 </figure>
