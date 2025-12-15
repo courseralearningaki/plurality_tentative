@@ -30,21 +30,21 @@ layout: home
            <a href="./engage/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 1</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">engage</div>
                         </div>
                 </div>
             </a>
            <a href="./engage_i18n/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 2</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">engage_i18n</div>
                         </div>
                 </div>
             </a>
            <a href="./engage_verb_en/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 3</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">engage_verb_en</div>
                         </div>
                 </div>
             </a>
@@ -53,21 +53,45 @@ layout: home
            <a href="./chapters-eng/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 4</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">chapters-eng</div>
                         </div>
                 </div>
             </a>
            <a href="./chapters-zh-tw/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 5</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">chapters-zh-tw</div>
                         </div>
                 </div>
             </a>
            <a href="./chapters-ja-jp/">
                 <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
                    <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
-                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">Engage 6</div>
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">chapters-ja-jp</div>
+                        </div>
+                </div>
+            </a>
+            </div>
+
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+           <a href="./chapters/th/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">/chapters/th/</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters/th-2/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">/chapters/th-2/</div>
+                        </div>
+                </div>
+            </a>
+           <a href="./chapters/ger/">
+                <div style="padding-left: 12px; padding-right: 12px; padding-top: 5px; padding-bottom: 5px; background: white; border-radius: 4px; justify-content: flex-start; align-items: center; gap: 4px; display: flex">
+                   <div style=" justify-content: center;width: 103px; height: 32px; padding-top: 0px; padding-bottom: 0px; left: 0px; top: 0px; align-items: center; gap: 6px; display: inline-flex">
+                            <div style="text-align: center; color: #222222; font-size: 14px; font-family: Jost; font-weight: 500; line-height: 19px; word-wrap: break-word">/chapters/ger/</div>
                         </div>
                 </div>
             </a>

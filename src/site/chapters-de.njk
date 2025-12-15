@@ -1,0 +1,54 @@
+---
+layout: home
+permalink: "/chapters/ger/"
+eleventyImport:
+  collections: ["language_repo_i18n"]
+---
+{%- from './_includes/macros/chapterversion-menu-item-individual-language.njk' import chapterVersionMenuItemIndividualLanguage -%}
+<-- {% include "partials/global-content.njk" %} -->
+{% include "partials/global-content_without_locals.njk" %}
+<div style="padding-top: 16px;">
+<div id="component2-top" style="align-self: stretch; padding: 32px; background: rgba(255, 255, 255, 0.20); border-radius: 32px; flex-direction: column; align-items: flex-start; display: inline-flex">
+            <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">Localized content</span><br>
+            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.pdf" class="button_small" style="margin-bottom: 3px; width:92px;">PDF</a></span>
+            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/latest/download/Plurality-traditional-mandarin.epub" class="button_small" style="margin-bottom: 3px; width:92px;">ePub</a></span>
+            <span style="text-transform: none;"><a target="_blank" href="https://github.com/pluralitybook/plurality/releases/download/latest/Plurality-english.mp3" class="button_small" style="margin-bottom: 3px;width:92px;">Audiobook</a></span>
+<br><br>
+            <span style="font-size:18px;font-family: Jost;display: inline-block; margin-bottom: 8px">選擇一個數位版本的下載格式，點擊按鈕以進行下載</span><br>
+</div>
+</div>
+<table>
+<tr>
+<td valign="top">
+<div id="version-menu">
+  <ol id="version-ol">
+    <div>
+{% for repo in language_repo_i18n %}
+{% if ((repo.id) == 'ger') %}
+{% if ((repo.upperpart_id) == '.') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">Section {{ repo.upperpart_text }}</li>
+    <div>
+{% elseif ((repo.upperpart_id) != '') %}
+    </div>
+          <li style="font-size:40px;padding:0 28px;">{{ repo.upperpart_text }}</li>
+    <div>
+{% endif %}
+
+        {{ chapterVersionMenuItemIndividualLanguage(
+          githubLink = repo.githubLink,
+          pageTitle = repo.urls.id_of_part,
+          subtitleTranslated = repo.urls.name_of_part,
+          pageUrl = "/v/parts/" + repo.urls.id_of_part + "/" + repo.id,
+          language = repo.name,
+          chapterid_subid = repo.urls.id_of_part)
+        }}
+{% endif %}
+{% endfor %}
+
+</div>
+</td>
+</tr>
+</table>
+
+{% include "partials/footer.njk" %}

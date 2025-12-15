@@ -29,7 +29,7 @@
     },
   {  "id": "ja",
       "name": "日本語",
-      "repo": "https://api.github.com/repos/nishio/plurality-japanese/contents/contents/english",
+      "repo": "https://api.github.com/repos/nishio/plurality-japanese/contents/contents/japanese",
       "part_id_text": [
         {
           "id": "1",
@@ -54,5 +54,20 @@
           "part": "二章"
         }
       ]
+    },
+  {  "id": "ger",
+      "name": "Deutsch",
+      "repo": "https://api.github.com/repos/GermanPluralityBook/pluralitaet/contents/contents/deutsch",
+      "part_id_text": [
+        {
+          "id": "1",
+          "part": "一章"
+        },
+        {
+          "id": "2",
+          "part": "二章"
+        }
+      ]
     }
+
 ]
